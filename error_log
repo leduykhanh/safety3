@@ -1,0 +1,156 @@
+[27-Sep-2016 12:43:04 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety/listwork_activity.php on line 107
+[27-Sep-2016 12:43:04 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety/listwork_activity.php on line 128
+[27-Sep-2016 12:43:04 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety/listwork_activity.php on line 150
+[27-Sep-2016 12:43:04 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety/listwork_activity.php on line 171
+[27-Sep-2016 09:43:07 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety/divAddRemoveSubmit.php on line 542
+[27-Sep-2016 09:43:07 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety/divAddRemoveSubmit.php on line 770
+[27-Sep-2016 12:43:38 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety/riskmange.php on line 110
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: NotifySignatureAdded in /home/juliuslim/public_html/safety/riskapproval.php on line 20
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: whenViewed in /home/juliuslim/public_html/safety/riskapproval.php on line 29
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: whenSignatureAdded in /home/juliuslim/public_html/safety/riskapproval.php on line 39
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: asTemplate in /home/juliuslim/public_html/safety/riskapproval.php on line 49
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: sendAttachment in /home/juliuslim/public_html/safety/riskapproval.php on line 58
+[27-Sep-2016 12:44:13 Europe/Bucharest] PHP Notice:  Undefined index: signingReminders in /home/juliuslim/public_html/safety/riskapproval.php on line 67
+[27-Sep-2016 12:48:14 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety/index.php on line 5
+[27-Sep-2016 12:54:56 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[27-Sep-2016 12:54:56 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[27-Sep-2016 12:54:56 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[27-Sep-2016 12:54:56 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[27-Sep-2016 09:54:59 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[27-Sep-2016 09:54:59 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[27-Sep-2016 12:55:02 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[27-Sep-2016 12:55:06 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[27-Sep-2016 12:55:35 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[27-Sep-2016 12:56:15 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[27-Sep-2016 12:56:26 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[27-Sep-2016 12:56:27 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[27-Sep-2016 12:56:27 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[27-Sep-2016 12:56:27 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[27-Sep-2016 12:56:27 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[27-Sep-2016 09:56:32 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[27-Sep-2016 09:56:32 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[28-Sep-2016 08:00:42 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 08:02:10 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 08:02:17 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 10:39:15 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 10:39:29 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 10:39:33 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 10:40:19 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[28-Sep-2016 10:40:20 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[28-Sep-2016 10:40:20 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[28-Sep-2016 10:40:20 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[28-Sep-2016 10:40:20 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[28-Sep-2016 10:40:28 Europe/Bucharest] PHP Notice:  Undefined index: hazard one in /home/juliuslim/public_html/safety3/companyreport.php on line 361
+[28-Sep-2016 10:40:28 Europe/Bucharest] PHP Notice:  Undefined index:  no injury in /home/juliuslim/public_html/safety3/companyreport.php on line 364
+[28-Sep-2016 10:40:28 Europe/Bucharest] PHP Notice:  unserialize(): Error at offset 0 of 8 bytes in /home/juliuslim/public_html/safety3/companyreport.php on line 369
+[28-Sep-2016 10:40:32 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[28-Sep-2016 10:40:32 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[28-Sep-2016 10:40:32 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[28-Sep-2016 10:40:32 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[28-Sep-2016 07:40:36 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[28-Sep-2016 07:40:36 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[28-Sep-2016 10:42:02 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[28-Sep-2016 10:42:06 Europe/Bucharest] PHP Notice:  Undefined index:  in /home/juliuslim/public_html/safety3/companyreport.php on line 364
+[29-Sep-2016 13:20:36 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[29-Sep-2016 13:20:43 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[29-Sep-2016 13:20:44 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[29-Sep-2016 13:20:44 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[29-Sep-2016 13:20:44 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[29-Sep-2016 13:20:44 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/copyworkactivityedit.php on line 20
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Undefined index: sharp edges in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 330
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  unserialize(): Error at offset 0 of 11 bytes in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 331
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 1 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 2 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 3 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 4 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 5 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 6 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 7 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 8 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 9 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 10 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Undefined index: electric shock in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 330
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 1 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 2 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 3 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 4 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 5 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 6 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 7 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 8 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 9 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 10 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  Undefined index: efewfwe in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 330
+[29-Sep-2016 13:20:52 Europe/Bucharest] PHP Notice:  unserialize(): Error at offset 0 of 4 bytes in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 331
+[29-Sep-2016 14:59:59 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 14:59:59 Europe/Bucharest] PHP Notice:  Undefined offset: 2 in /home/juliuslim/public_html/safety3/riskmange.php on line 107
+[29-Sep-2016 14:59:59 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 14:59:59 Europe/Bucharest] PHP Notice:  Undefined offset: 2 in /home/juliuslim/public_html/safety3/riskmange.php on line 107
+[29-Sep-2016 14:59:59 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 15:00:02 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 15:00:02 Europe/Bucharest] PHP Notice:  Undefined offset: 2 in /home/juliuslim/public_html/safety3/riskmange.php on line 107
+[29-Sep-2016 15:00:02 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 15:00:02 Europe/Bucharest] PHP Notice:  Undefined offset: 2 in /home/juliuslim/public_html/safety3/riskmange.php on line 107
+[29-Sep-2016 15:00:02 Europe/Bucharest] PHP Notice:  Undefined index: riskLevel in /home/juliuslim/public_html/safety3/riskmange.php on line 110
+[29-Sep-2016 15:00:53 Europe/Bucharest] PHP Notice:  Undefined index: select_all in /home/juliuslim/public_html/safety3/companyreport.php on line 379
+[29-Sep-2016 15:00:53 Europe/Bucharest] PHP Notice:  Undefined index:  in /home/juliuslim/public_html/safety3/companyreport.php on line 469
+[29-Sep-2016 15:00:53 Europe/Bucharest] PHP Notice:  Undefined index:  in /home/juliuslim/public_html/safety3/companyreport.php on line 361
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/copyworkactivityedit.php on line 20
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 1 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 2 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 3 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 4 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 5 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 6 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 7 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 8 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 9 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 10 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Undefined index:  in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 330
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 1 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 2 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 3 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 4 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 5 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 6 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 7 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 8 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 9 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Uninitialized string offset: 10 in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 320
+[29-Sep-2016 15:01:51 Europe/Bucharest] PHP Notice:  Undefined index:  in /home/juliuslim/public_html/safety3/divAddRemoveSubmitEdit.php on line 330
+[30-Sep-2016 06:41:40 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 107
+[30-Sep-2016 06:41:40 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 128
+[30-Sep-2016 06:41:40 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 150
+[30-Sep-2016 06:41:40 Europe/Bucharest] PHP Notice:  Undefined variable: status in /home/juliuslim/public_html/safety3/listwork_activity.php on line 171
+[30-Sep-2016 06:41:50 Europe/Bucharest] PHP Notice:  Undefined variable: row in /home/juliuslim/public_html/safety3/listwork_activity.php on line 498
+[30-Sep-2016 03:41:57 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[30-Sep-2016 03:41:57 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[30-Sep-2016 06:43:16 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[30-Sep-2016 06:58:32 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[30-Sep-2016 07:05:50 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[01-Oct-2016 04:50:16 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[01-Oct-2016 05:28:53 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[02-Oct-2016 23:24:16 Europe/Bucharest] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/index.php on line 5
+[03-Oct-2016 02:11:47 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:11:47 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[03-Oct-2016 02:13:22 UTC] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 3
+[03-Oct-2016 02:13:22 UTC] PHP Notice:  Undefined index: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 431
+[03-Oct-2016 02:13:22 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:13:22 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[03-Oct-2016 02:13:39 UTC] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 3
+[03-Oct-2016 02:13:39 UTC] PHP Notice:  Undefined index: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 431
+[03-Oct-2016 02:13:39 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:13:39 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[03-Oct-2016 02:38:13 UTC] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 3
+[03-Oct-2016 02:38:13 UTC] PHP Notice:  Undefined index: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 431
+[03-Oct-2016 02:38:13 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:38:13 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[03-Oct-2016 02:48:11 UTC] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 3
+[03-Oct-2016 02:48:11 UTC] PHP Notice:  Undefined index: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 431
+[03-Oct-2016 02:48:11 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:48:11 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770
+[03-Oct-2016 02:58:43 UTC] PHP Notice:  Undefined index: adminid in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 3
+[03-Oct-2016 02:58:43 UTC] PHP Notice:  Undefined index: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 431
+[03-Oct-2016 02:58:43 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 542
+[03-Oct-2016 02:58:43 UTC] PHP Notice:  Undefined variable: name in /home/juliuslim/public_html/safety3/divAddRemoveSubmit.php on line 770

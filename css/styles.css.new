@@ -1,0 +1,292 @@
+  
+.form-row
+{
+
+ margin-bottom:15px;
+}
+
+.form-below
+{
+ padding-bottom:35px; 
+}
+
+
+.form_pad
+{
+  border:1px solid #c0c0c0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.span4
+{
+  width: 100%;
+}
+.span3
+{
+  width: 35%;
+    margin-left: 7px;
+}
+
+.add_activity
+{
+ height:1px;border:none;color:black;background-color:#333; 
+}
+
+.add_risk
+{
+height:2px;border:none;color:black;background-color:#333; 
+}
+.add-new-work
+{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.span5
+{
+  width: 94%;
+}
+.btn-right
+{
+  float: right;
+  margin-bottom:20px;
+  
+
+}
+
+button.button {
+ margin-left:10px;
+     border: 1px solid black;
+
+  }
+
+button.button_cancel{
+  margin-left:10px;
+padding-right: 22px;
+  padding-left: 22px;
+    border: 1px solid black;}
+button.button_next
+{
+  margin-left:10px;
+  padding-right: 22px;
+  padding-left: 13px;
+      border: 1px solid black;
+}
+
+.question_icon_spaccing
+{
+  margin-right:15px;
+}
+
+.notify_checkbox
+{
+  margin-right:75px;
+}
+/* suraj  */
+
+button.button_new {
+ margin-left:10px;
+     border: 2px solid black;
+   padding-top: 5px;
+    padding-bottom: 5px;
+   padding-right: 20px;
+    padding-left: 20px;
+
+  }
+  
+  button.button_cancel_new{
+  margin-left:10px;
+ padding-top: 5px;
+    padding-bottom: 5px;
+   padding-right: 20px;
+    padding-left: 20px;
+    border: 5px solid black;
+  }
+  
+  button.button_send_documnet
+{
+  margin-left:10px;
+  padding-top: 5px;
+    padding-bottom: 5px;
+   padding-right: 20px;
+    padding-left: 20px;
+      border: 5px solid black;
+    background-color: #F5EAEA;
+    color: black;
+}
+
+.days_input
+{
+  width:6%;
+}
+
+.simple_text
+{
+  margin-left:32px;
+}
+
+.span_input
+{
+  width: 92%;
+  border: 5px solid black;
+  
+}
+
+.button_new_risk
+{
+  
+     border: 2px solid black;
+   padding-top: 5px;
+    padding-bottom: 5px;
+   padding-right: 10px;
+    padding-left: 10px;
+}
+
+.upper_data
+{
+  float:right;
+}
+
+.out_1
+{
+  margin-right:120px;
+}
+
+.out_2
+{
+  margin-right:100px;
+}
+
+.out_2
+{
+  margin-right:60px;
+}
+
+.out_3
+{
+  margin-right:60px;
+}
+
+.out_4
+{
+  margin-right:25px;
+}
+
+.awating
+{
+  color:red
+}
+
+.heading
+{
+  background-color:#868080;
+  color:white;
+}
+
+.bs-example
+{
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 16%;
+ }
+ 
+ .head_login
+ {
+   text-align:center
+   
+ }
+
+.container_login
+{
+  margin-top:80px;
+  
+}
+
+.logout
+{
+  float:right;
+}
+
+.menu_new
+{
+  padding-right:15px;
+}
+
+/* suraj  */
+
+/*RAjesh*/
+.align_right
+{
+  float: right;
+}
+
+.seach_text
+{
+  border: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.seach_text
+{
+  border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.button_report
+{
+   border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 12px;
+}
+
+.cont
+{
+  overflow: hidden;
+   
+    height:100px; /* or other */
+    -o-text-overflow: ellipsis;  /* Opera */
+       text-overflow: ellipsis;
+    
+}
+td a{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.button_new_work
+{
+ border: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 12px;
+    margin-top: 10px; 
+}
+/*14-01-16*/
+.form_margin {
+  padding-left: 14px;
+
+}
+
+.cws
+{
+  min-width: 120px;
+}
+
+.hazardSection input, .hazardSection select, .hazardSection textarea{width:100%;}

@@ -1,0 +1,175 @@
+@charset "utf-8";
+/* CSS Document */
+/*snehal 25july13*/
+body{
+    /*background: none repeat scroll 0 0 #FDF3E7; *//*FDF3E7*/
+    color: #0F0F0F;
+    font: 15px/20px Arial,Helvetica,sans-serif;
+    margin: 32px 0 0;
+    padding: 0;
+}
+
+.content{
+	margin-top:15px;
+	padding:5px;
+	width:50%;
+}
+#login{
+	/*background: url(../images/loginback.jpg);
+	background-repeat:no-repeat;*/
+	background:#FFFFFF;
+}
+#m_login{
+	width:500px;
+	height:300px;
+	padding:10px;
+	 margin: 150px 422px 50px ;
+	background:#f6f6f6;	/*ECECEA*/
+	/*border:1px solid #999999;*/
+	border-radius:5px;
+	box-shadow: 5px 5px 5px #B3B3B3;
+	
+}
+
+#l_title{
+	 background: none repeat scroll 0 0 #8BB827;
+    border-radius: 4px 5px 0 0;
+    color: #FFFFFF;
+    font-weight: 300;
+    height: 25px;
+    margin-left: -10px;
+    margin-top: -10px;
+    padding: 14px 4px 6px 29px;
+    width: 487px;
+}
+
+.l_table{
+	margin-top:40px;
+}
+
+.l_input_img{
+	/*background: url(../images/user.jpg)0 0 no-repeat;*/
+   /*background-image:url('../images/user.jpg');
+background-repeat:no-repeat;
+padding-left:20px;*/
+}
+
+.l_input{
+	
+	 border: 1px solid #cecece;
+    border-radius: 5px 5px 5px 5px;
+    padding-left:15px;
+    box-shadow: 5px #B3B3B3;
+	color: #000000;
+    height: 40px;
+    padding: 4px;
+	width:280px;
+	background:#f6f6f6;
+	/*-moz-box-shadow:    inset 0 0 10px #B3B3B3;
+   -webkit-box-shadow: inset 0 0 10px #B3B3B3;
+   box-shadow:         inset 0 0 10px #B3B3B3;*/
+	
+}
+.login
+{
+	background: none repeat scroll 0 0 #8BB827;	/*8BB827*/
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-weight: 800;
+    height: 40px;
+    padding: 5px;
+    width: 200px;
+}
+
+/*snehal 25july13*/
+#find{
+	float: right;
+    height: 30px;
+    margin-right: -600px;
+    margin-top: -50px;
+    padding: 5px;
+    width: 300px;
+}
+
+#sort_data{
+	margin-bottom: 20px;
+    margin-left:790px;
+    width: 200px;
+}
+
+#maintable{
+	margin-top:-1.55px;
+}
+/*End*/
+.style{
+	margin-left:34%;
+	color:#FF0000;
+}
+
+.left_panel{
+	width:235px;
+	height:630px;
+	float:left;
+	background:#1F1F24;
+	padding-top:50px;
+	padding-left:1px;
+	margin-left:-8px;
+	margin-top:-8px;
+	
+}
+.right_panel{
+	float:left;
+	width:72%;
+	height:auto;
+	padding-left:50px;
+	padding-top:115px;
+}
+
+.add_user{
+	width:59%;
+	height:350px;
+}
+.add_user td input["type"] {
+	width:150px;	
+}
+
+.add_user td {
+	padding:15px 15px 15px 15px;
+}
+.errormsg{
+	width:450px;
+	padding-left:5px;
+	text-align:left;
+	color:#FF0000;
+}
+
+.successmsg{
+	width:450px;
+	padding-left:5px;
+	text-align:left;
+	color: #009900;
+ }
+ 
+ 
+ #register input#name 
+{
+  background: #fff url('../images/u9.jpg') 5px 4px no-repeat;
+}
+
+#register input#email 
+{
+  background: #fff url('../images/email.png') 5px 4px no-repeat;
+}
+
+#register input#password 
+{
+  background: #fff url('../images/p4.jpg') 5px 4px no-repeat;
+}
+
+#register input#confirmpassword 
+{
+  background: #fff url('../images/p4.jpg') 5px 4px no-repeat;
+}
