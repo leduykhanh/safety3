@@ -11,15 +11,15 @@ session_start();
 
   .container {
     width: 1170px;
-    
+
 }
 
 </style>
-<?php 
+<?php
 
  if(isset($_SESSION['adminid'])=="")
  {
- 
+
  ?><script type="text/javascript">window.location.assign('index.php');</script>
  <?php
 
@@ -27,7 +27,7 @@ session_start();
 
  if(isset($_GET['riskid']) && isset($_GET['updateStatus']) && isset($_GET['updateStatusSubmit']))
  {
-     
+
 $today = date('Y-m-d H:i:s');
 
 $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
@@ -35,7 +35,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
 
       $updateSql = "UPDATE  `riskassessment` SET  `status` =  '$_GET[updateStatus]',`approveDate` =  '$today',`revisionDate` =  '$afterSevenYears',`approveBy` =  '$_SESSION[adminid]',`approverEmail` =  '".$_SESSION['useremail']."' WHERE  `id` =$_GET[riskid]";
-   
+
 
 
 
@@ -47,7 +47,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
         <?php
 
       }
-      
+
 
  }
  else
@@ -55,14 +55,14 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
    $messageUpdate = '';
  }
 ?>
-  
+
               <?php
-                //get count 
+                //get count
               //0 outstanding 1 for draft 2 approved 3 archive
                     $sqlOutStanding = "SELECT * FROM riskassessment where status = 0";
                     $resultlOutStanding = mysqli_query($con, $sqlOutStanding);
                     $outStandingRow= mysqli_num_rows($resultlOutStanding);
-                    
+
                     $sqlDraft = "SELECT * FROM riskassessment where status = 1";
                     $resultlDraft = mysqli_query($con, $sqlDraft);
                     $draftRow= mysqli_num_rows($resultlDraft);
@@ -78,10 +78,10 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
               ?>
    <div class="container">
-   
+
    <div class="row" style="padding-bottom: 10px;">
    			<div class="col-sm-6" style="text-align:left; padding:0px"><strong>Risk Register Summary</strong></div>
-  			<div class="col-sm-6 pull-right" style="text-align:right; padding:0px">	
+  			<div class="col-sm-6 pull-right" style="text-align:right; padding:0px">
  				<a href="divAddRemoveSubmit.php">
               <button class="btn btn-success">
                 <strong>+ Add New Risk Assessment</strong>
@@ -89,13 +89,13 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
             </a>
             </div>
     </div>
-   
-   
+
+
    <div class="claer-fix"></div>
-    
+
     <div class="row"  style="padding-bottom: 10px;">
-    		<div class="col-sm-5" style="text-align:left; padding:0px"><strong>QE Safety Consultancy Pte Ltd</strong></div>
-            <div class="col-sm-7" style="padding:0px; text-align:right;"> 
+    		<div class="col-sm-5" style="text-align:left; padding:0px"><strong>Armada Aluminum Renovation Construction Pte Ltd</strong></div>
+            <div class="col-sm-7" style="padding:0px; text-align:right;">
 
                           <?php
                           if(isset($_GET['status']))
@@ -105,9 +105,9 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           }
 
                           if($status==0){
-							  
+
                             ?><a href="listwork_activity.php?status=0"><u><b>Outstanding (<?php echo $outStandingRow;?>)</b></u> </a>&nbsp;<strong>|</strong>&nbsp;
-                            
+
                             <?php
                           }
                           else
@@ -115,9 +115,9 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           ?>
                           <a href="listwork_activity.php?status=0">Outstanding (<?php echo $outStandingRow;?>) </a>&nbsp;<strong>|</strong>&nbsp;
                           <?php } ?>
-                          
-                          
-                          
+
+
+
                              <?php
                           if(isset($_GET['status']))
 
@@ -128,7 +128,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           if($status==1){
                             ?>
 
-                          
+
                           <a href="listwork_activity.php?status=1"><u><b> Draft (<?php echo $draftRow;?>)</b></u> </a> &nbsp;<strong>|</strong>&nbsp;
                              <?php
                           }
@@ -136,10 +136,10 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           {
                           ?>
                              <a href="listwork_activity.php?status=1"> Draft (<?php echo $draftRow;?>) </a> &nbsp;<strong>|</strong>&nbsp;
-                             
-                        <?php } ?>  
-                        
-                        
+
+                        <?php } ?>
+
+
                               <?php
                           if(isset($_GET['status']))
 
@@ -149,9 +149,9 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
                           if($status==2){
                             ?>
- 
-                          
-                          
+
+
+
                           <a href="listwork_activity.php?status=2"><u><b> Approved (<?php echo $OutApprove;?>)</b></u> </a>&nbsp; <strong>|</strong>&nbsp;
                              <?php
                           }
@@ -159,8 +159,8 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           {
                           ?>
                           <a href="listwork_activity.php?status=2"> Approved (<?php echo $OutApprove;?>) </a>&nbsp; <strong>|</strong>&nbsp;
-                             <?php } ?>  
-                             
+                             <?php } ?>
+
                                     <?php
                           if(isset($_GET['status']))
 
@@ -170,31 +170,31 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
                           if($status==3){
                             ?>
- 
-                          
-                          
-                      
-                          
+
+
+
+
+
                           <a href="listwork_activity.php?status=3"><u><b> Archived (<?php echo $OutArchived;?>)</b></u></a>    <strong>|</strong>&nbsp;
                              <?php
                           }
                           else
                           {
                           ?>
-                          
-                          
-                          
-                          
+
+
+
+
                              <a href="listwork_activity.php?status=3"> Archived (<?php echo $OutArchived;?>)</a>    <strong>|</strong>&nbsp;
-                               <?php } ?> 
-                             
-                             
+                               <?php } ?>
+
+
               </div>
-              
+
               <div class="claer-fix"></div>
     </div>
-    
-    
+
+
    <div class="row">
       <?php if(isset($_GET['msg_error']))
       {?>
@@ -207,10 +207,10 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
     <?php
       }
       ?>
-      
 
 
-          <div class="table-responsive"> 
+
+          <div class="table-responsive">
             <?php
             if(isset($_GET['message']) && $_GET['message'] != '')
             {
@@ -231,15 +231,15 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
               <?php
             }
             ?>
-            
 
-              <!--sorting data--> 
-  
+
+              <!--sorting data-->
+
     <table id="dttbl"  class="table table-bordered table table-striped" style="table-layout: fixed;
     width: 100%;">
-  
+
         <thead style="background-color: #D7EBF9;">
-       
+
              <tr>
                <th  class="heading" style="width:6% !important">
                         Ref No
@@ -260,17 +260,17 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
              		 Approving Mngr
             	</th>
                <th>       Status
-                   
+
                   </th>
-                
-                
+
+
             </tr>
         </thead>
         <tbody id="myTable">
-        <?php 
+        <?php
         if(isset($_GET['sort']))
         {
-            
+
              if ($_GET['sort'] == 'ASC' && $_GET['field'] !='')
              {
                 $order = " ORDER BY $_GET[field] ASC";
@@ -284,7 +284,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                 $order= " ORDER BY id ASC";
               }
 
-            
+
 
         }
         else
@@ -296,12 +296,12 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
         {
             if(isset($_GET['id']) && $_GET['id'] !='')
             {
-              $whereStatus = " WHERE  status = $_GET[status] AND id= $_GET[id]";   
+              $whereStatus = " WHERE  status = $_GET[status] AND id= $_GET[id]";
             }
             else
-            { 
+            {
               $whereStatus = " WHERE  status = $_GET[status]";
-            }  
+            }
         }
         else
         {
@@ -314,10 +314,10 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
         $num_row= mysqli_num_rows($result);
        if($num_row>0)
        {
-               while($row = mysqli_fetch_assoc($result)) 
+               while($row = mysqli_fetch_assoc($result))
                {
 
-             ?> 
+             ?>
                      <tr>
                         <td ><?php echo $row['id'];?></td>
                         <td ><?php echo $row['location'];?></td>
@@ -331,27 +331,27 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                           echo $date = date('d-m-Y', strtotime($row['approveDate']));
                         }
                         ?></td>
-                        <td > 
+                        <td >
                        <?php if($row['approveDate'] =='0000-00-00 00:00:00')
                         {
                           echo '';
                         }
                         else
                         {
-                      
-					   
+
+
 					   echo $creationDate =  date('d-m-Y', strtotime('+3 years', strtotime($row['approveDate'])));
 						}
                         ?></td>
-                         
-                        <td ><?php 
+
+                        <td ><?php
                                  $sqlUser = "SELECT * FROM staff_login where id = $row[createdBy]";
                                 $resultlUser = mysqli_fetch_assoc(mysqli_query($con, $sqlUser));
                                 if($resultlUser)
                                 {
                                   echo '<p><strong>'.$resultlUser['name'].'</strong></p>';
-                                }  
-                                
+                                }
+
 
 
 
@@ -371,12 +371,12 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                                     if($row['approverEmail'] == $resultSignee['email'])
                                     {
                                         if($resultSignee['name'] != '')
-                                        { 
+                                        {
 
                                          echo '<p><span class="glyphicon glyphicon-ok"></span> <strong>';
                                          echo $resultSignee['name'];
-                                        
-                                         //get designation 
+
+                                         //get designation
                                           //$sqlUser = "SELECT * FROM staff_login where email = '$resultSignee[email]'";
                                           //$resultlUser = mysqli_fetch_assoc(mysqli_query($con, $sqlUser));
 
@@ -385,12 +385,12 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
                                     }
                                     else
-                                    { 
+                                    {
                                         if($resultSignee['name'] != '')
                                         {
                                          echo '<p><strong>'.$resultSignee['name'].'</p>';
                                         // echo " , ";
-                                         //get designation 
+                                         //get designation
                                          // $sqlUser = "SELECT * FROM staff_login where email = '$resultSignee[email]'";
                                          // $resultlUser = mysqli_fetch_assoc(mysqli_query($con, $sqlUser));
 
@@ -403,16 +403,16 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
 
                         </td>
-                        <td><?php 
+                        <td><?php
                                 if($row['status'] == 0)
                                 {
                                 //check whether he is authorized or not
-                                
+
                                  $sqlSigning = "SELECT * FROM signing where riskid = $row[id] AND email = '".$_SESSION['useremail']."'";
                                 $exeSigning = mysqli_query($con, $sqlSigning);
                                 $resultlSigning = mysqli_fetch_assoc($exeSigning);
-                                
-                                $signingCount = mysqli_num_rows($exeSigning);  
+
+                                $signingCount = mysqli_num_rows($exeSigning);
                                 if($signingCount > 0)
                                 {
                                   $disabled = '';
@@ -421,23 +421,23 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                                 {
                                   $disabled = 'disabled="disabled"';
                                 }
-                                  
+
                                   ?>
                                   <form id="updateFormId<?php echo $row['id'];?>" name="updateForm<?php echo $row['id'];?>" action="listwork_activity.php" method="get" >
                                       <input name="riskid" value="<?php echo $row['id'];?>" type="hidden">
 
                                        <input name="updateStatus" value="2" type="hidden">
 
-                                     
-                                       
-                                       <input <?php echo $disabled;?> type="submit" name="updateStatusSubmit" value="Click to approve" class="btn btn-danger btn-sx"> 
-                                        
-                                    
 
-                                  
-                                  
+
+                                       <input <?php echo $disabled;?> type="submit" name="updateStatusSubmit" value="Click to approve" class="btn btn-danger btn-sx">
+
+
+
+
+
                                  &nbsp;<a href="divAddRemoveSubmitEdit.php?riskid=<?php echo $row['id'];?>" style="text-decoration: none"><input  type="button" name="updateStatusSubmit" value="Edit" class="btn btn-warning btn-sx" style="width:15%"></a>
-                                  
+
                                   &nbsp;<a href="companyreport.php?riskid=<?php echo $row['id'];?>" style="text-decoration: none"><input  type="button" name="updateStatusSubmit" value="View" class="btn btn-warning btn-sx"  style="width:15%" ></a>
 
   &nbsp;<a href="copydata.php?riskid=<?php echo $row['id'];?>&status=0&message=document sents successfully" style="text-decoration: none">
@@ -446,7 +446,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
 
                                   </form>
                                   <?php
-								  
+
                                 }
 
                                 if($row['status'] == 1)
@@ -478,7 +478,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                 } // end of while
         }
         ?>
-           
+
 
         </tbody>
     </table>
@@ -486,9 +486,9 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
       </div>
       </div>
       </div>
- 
 
- 
+
+
 <script>
 language="JavaScript" type="text/javascript">
  function $row['id']
