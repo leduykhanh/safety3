@@ -21,8 +21,8 @@ setcookie('remember_pass', $_POST['password'], $year);
 }
 ?>
 	<?php
-	
-	
+
+
 	if($_SERVER['REQUEST_METHOD']=="POST")
 {
 	$email = mysqli_real_escape_string($con,$_POST['email']);
@@ -30,8 +30,8 @@ setcookie('remember_pass', $_POST['password'], $year);
 	$sel_user = "select * from staff_login where email='$email' AND password='$pass'";
 	$run_user = mysqli_query($con, $sel_user);
 	$check_user = mysqli_num_rows($run_user);
-	   
-	  
+
+
 		if($check_user>0)
 		{
 			$result = mysqli_fetch_assoc($run_user);
@@ -39,17 +39,17 @@ setcookie('remember_pass', $_POST['password'], $year);
 			$_SESSION['useremail'] = $result['email'];
 			$_SESSION['adminid'] = $result['id'];
             $_SESSION['name'] = $result['name'];
-		
+
 			echo "<script>window.open('listwork_activity.php','_self')</script>";
-		
+
 		}
-		else 
+		else
 		{
-					
+
 			echo "<script>alert('username or password is not correct, try again!')</script>";
-		
+
 			echo "<script>window.open('index.php','_self')</script>";
-		
+
 		}
 
 }
@@ -74,15 +74,15 @@ setcookie('remember_pass', $_POST['password'], $year);
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-   
+
    <style type="text/css">
- 
+
 body {
     font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     font-size: 13px;
 }
    </style>
-   
+
 
    </head>
 
@@ -91,14 +91,14 @@ body {
             <div class="container_login">
 
                 <form name="login" id="login" method="POST" action="">
-                    
+
                     <div class="col-sm-12">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8 form_pad">
                             <div>
-                                <a href="#"><img class="center-block" src="images/risklogo.png"/></a>
+                                <a href="#"><img class="center-block" src="images/logo.jpg"/></a>
                             </div>
-                			
+
                             <h3 class="head_login" style="font-family:CALIBRI">Risk Assessment Management Tool</h3>
                             <div class=" head_login">
 
@@ -118,12 +118,12 @@ body {
                                         else
                                          {
                                             $cookie_me="";
-                                         }   
+                                         }
                                        ?>
                                         <input class="span4" type="email" name="email" id="username" required value="<?php echo $cookie_me; ?>" />
-                                    </div>                            
-                                </div>                        
-                          
+                                    </div>
+                                </div>
+
                                 <div class="col-sm-12 form-row">
                                     <div class="col-sm-4">
                                         <label style="font-family:CALIBRI">Password</label>
@@ -135,22 +135,22 @@ body {
                                         else
                                          {
                                             $cookie_pass="";
-                                         }   
+                                         }
                                        ?>
                                     <div class="col-sm-6">
                                         <input class="span4" type="password" name="password" id="password" required value="<?php echo $cookie_pass;?>"/>
-                                    </div>                            
-                                </div> 
-                          
+                                    </div>
+                                </div>
+
                                 <div class="col-sm-12 form-row" style="margin-top: 10px;">
                                     <div class=" col-sm-6" style=" margin-left:307px; margin-top:-20px;">
-                             
+
                                             <!-- <input  type="checkbox" name='remember' value="1"  />
-                                            Remember Me --> 
+                                            Remember Me -->
                                             <button type="submit" class="col-sm-6 btn btn-success btn-lg"><strong>Login</strong></button>
                                             <!--<button class="button_send_documnet"><a href="forgotpassword.php"<strong>Forget Password</strong></a></button>-->
                                     </div>
-                                </div>                           
+                                </div>
                             </div>
                         </div>
                     </div>

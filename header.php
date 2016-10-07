@@ -8,7 +8,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    <link rel="stylesheet" type="text/css" href="css1/jquery-ui-1.8.4.custom.css">  
+    <link rel="stylesheet" type="text/css" href="css1/jquery-ui-1.8.4.custom.css">
 
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -19,15 +19,15 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-   
+
    <style type="text/css">
- 
+
 body {
     font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     font-size: 18px;
 }
    </style>
-   
+
 
    </head>
 
@@ -35,7 +35,7 @@ body {
     <div class="container">
         <div class="row">
         <div class="col-sm-2">
-        <div class="logo"><a href="index.php"><img src="images/risklogo.png"/></a></div>
+        <div class="logo"><a href="index.php"><img src="images/logo.jpg"/></a></div>
         </div>
         <div class="col-sm-10">
         <span class="logout">
@@ -43,7 +43,7 @@ body {
         </span>
         </div>
         </div>
-       
-       
-         
+
+
+
        </div>
