@@ -96,7 +96,7 @@ body {
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8 form_pad">
                             <div>
-                                <a href="#"><img class="center-block" src="images/logo.jpg"/></a>
+                                <a href="#"><img width=50 class="center-block" src="images/logo.jpg"/></a>
                             </div>
 
                             <h3 class="head_login" style="font-family:CALIBRI">Risk Assessment Management Tool</h3>
