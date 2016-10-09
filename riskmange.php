@@ -52,7 +52,6 @@ define('NON_ACTIVE', 0);
        foreach ($_POST['RA_Member'] as $RA_Member)
         {
           $raMemberSql = "INSERT INTO `ramember` (`id`, `riskid`, `name`, `stauts`) VALUES (NULL, '".$_GET['riskid']."', '".$RA_Member."', 0)";
-          echo $raMemberSql;
           mysqli_query($con, $raMemberSql);
         }
 
@@ -156,7 +155,7 @@ if(isset($insertHazardsId))
 
   if($_POST['saveAsDraft'] == 'Next')
   {
-    // echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
+    echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
   }
   else
   {
