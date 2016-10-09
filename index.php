@@ -95,7 +95,7 @@ body {
                     <div class="col-sm-12">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8 form_pad">
-                            <div>
+                            <div style="margin-top:10px">
                                 <a href="#"><img width=150 class="center-block" src="images/logo.jpg"/></a>
                             </div>
 
