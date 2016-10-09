@@ -38,6 +38,7 @@ define('NON_ACTIVE', 0);
   {
       $riskassessment = "UPDATE  `riskassessment` SET  `createdDate` =  '".$creationDate."' ,
       `location` =  '".$_POST['location']."',`process` =  '".$_POST['process']."',
+      `expiry_date` =  '".$_POST['expiry_date']."',
       `status` = ".$status."
       WHERE `id` =".$_GET['riskid']."";
       $update_riskassessment=mysqli_query($con, $riskassessment);
@@ -71,8 +72,7 @@ define('NON_ACTIVE', 0);
  else
   {
 
-     $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, NULL, NULL, '".$status."');";
-     echo $riskassessment;
+     $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`,`expiry_date`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, NULL, NULL, '".$status."',".$_POST["expiry_date"].");";
       $insert_riskassessment=mysqli_query($con, $riskassessment);
       $riskassessmentId = mysqli_insert_id($con);
       echo $riskassessmentId;

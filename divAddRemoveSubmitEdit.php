@@ -155,6 +155,15 @@ else
                               </label>
                               </div>
                             </div>
+                            <div class="col-sm-6">
+                              <label class="col-sm-4 compulsary">Expiry Date:</label>
+                              <select  name="expiry_date">
+                                <option value="1" <?php echo $valueRisk['expiry_date']==1?"selected":"";?>>1</option>
+                                <option value="2" <?php echo $valueRisk['expiry_date']==2?"selected":"";?>>2</option>
+                                <option value="3" <?php echo $valueRisk['expiry_date']==3?"selected":"";?>>3</option>
+                              </select>
+                              <span>year(s)</span>
+                            </div>
                 </div>
       </div>
 
