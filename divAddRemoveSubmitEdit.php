@@ -178,11 +178,8 @@ else
                         <label class="col-sm-8">
                          <select name="RA_Member[]" class="span4 ra_members" id="inputSaving" required>
                             <option value="" <?php echo ($valueRAMember['name'] == "")?'selected="selected"' : ''; ?> >-- Select RA members --</option>
-                            <option value="name1" <?php echo ($valueRAMember['name'] == "name1")?'selected="selected"' : ''; ?>>Name 1</option>
-                            <option value="name2" <?php echo ($valueRAMember['name'] == "name2")?'selected="selected"' : ''; ?>>Name 2</option>
-                            <option value="name3" <?php echo ($valueRAMember['name'] == "name3")?'selected="selected"' : ''; ?>>Name 3</option>
-                            <option value="name4" <?php echo ($valueRAMember['name'] == "name4")?'selected="selected"' : ''; ?>>Name 4</option>
-                            <option value="name5" <?php  echo($valueRAMember['name'] == "name5")?'selected="selected"' : ''; ?>>Name 5</option>
+                            <option value="name1" <?php echo ($valueRAMember['name'] == "name1")?'selected="selected"' : ''; ?>>W. K. Chan</option>
+                            <option value="name2" <?php echo ($valueRAMember['name'] == "name2")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
                         </select>
                         </label>
                     </div>
@@ -203,11 +200,8 @@ else
                         <label class="col-sm-8">
                        <select name="RA_Member[]" class="span4 ra_members" id="inputSaving" required>
                             <option value="" >-- Select RA members --</option>
-                            <option value="name1" >Name 1</option>
-                            <option value="name2" >Name 2</option>
-                            <option value="name3">Name 3</option>
-                            <option value="name4" >Name 4</option>
-                            <option value="name5" >Name 5</option>
+                            <option value="name1">W. K. Chan</option>
+                            <option value="name2">Liang Kan Fat</option>
                         </select>
                         </label>
                     </div>
