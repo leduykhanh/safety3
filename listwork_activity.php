@@ -323,7 +323,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                         <td ><?php echo $row['id'];?></td>
                         <td ><?php echo $row['location'];?></td>
                         <td ><?php echo wordwrap($row['process'], 25, "\n", 1);?></td>
-                        <td ><?php if($row['approveDate'] =='0000-00-00 00:00:00')
+                        <td ><?php if($row['approveDate'] ==null)
                         {
                           echo '';
                         }
@@ -333,7 +333,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                         }
                         ?></td>
                         <td >
-                       <?php if($row['approveDate'] =='0000-00-00 00:00:00')
+                       <?php if($row['approveDate'] ==null)
                         {
                           echo '';
                         }
@@ -341,7 +341,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                         {
 
 
-					   echo $creationDate =  date('d-m-Y', strtotime('+3 years', strtotime($row['approveDate'])));
+					   echo $creationDate =  date('d-m-Y', strtotime('+'.$row["expiry_date"].' years', strtotime($row['approveDate'])));
 						}
                         ?></td>
 
