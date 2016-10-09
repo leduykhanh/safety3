@@ -98,6 +98,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
             <div class="col-sm-7" style="padding:0px; text-align:right;">
 
                           <?php
+                          $status = 0;
                           if(isset($_GET['status']))
 
                           {
