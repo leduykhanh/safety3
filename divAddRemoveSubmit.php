@@ -510,11 +510,9 @@ alert(attrName);
                         <?php /*?><input  name="RA_Member[]" class="span4" type="text" id="inputSaving" placeholder=""><?php */?>
                         <select name="RA_Member[]" class="span4" id="inputSaving" required>
                          <option value="">-- Select RA members --</option>
-                        <option value="name1">Name 1</option>
-                        <option value="name2">Name 2</option>
-                        <option value="name3">Name 3</option>
-                        <option value="name4">Name 4</option>
-                        <option value="name5">Name 5</option>
+                        <option value="name1">W. K. Chan</option>
+                        <option value="name2">Liang Kan Fat</option>
+
                         </select>
                         </label>
                     </div>
@@ -729,11 +727,8 @@ alert(attrName);
                                         <label class="col-sm-6">Action Officer:</label>
                                           <select name="actionOfficer[]"   class="col-sm-6" >
                                             <option value="-">Select Action Officer</option>
-                                            <option value="action_officer1">Action officer 1</option>
-                                            <option value="action_officer2">Action officer 2</option>
-                                            <option value="action_officer3">Action officer 3</option>
-                                            <option value="action_officer4">Action officer 4</option>
-                                            <option value="action_officer5">Action officer 5</option>
+                                            <option value="name1">W. K. Chan</option>
+                                            <option value="name2">Liang Kan Fat</option>
                                         </select>
                                     </div>
                                      <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
