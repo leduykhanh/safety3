@@ -486,6 +486,15 @@ alert(attrName);
                                 <input name="process" class="span4" type="text" id="inputSaving" placeholder="" required>
                               </label>
                             </div>
+                            <div class="col-sm-6">
+                              <label class="col-sm-4 compulsary">Expiry Date:</label>
+                              <select  name="expiry_date">
+                                <option value="1" selected>1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                              </select>
+                              <span>year(s)</span>
+                            </div>
 
                 </div>
                 <div class="col-sm-12"> <hr class="add_activity"></div>
@@ -772,7 +781,7 @@ alert(attrName);
                         <hr class="add_risk" />
                         <div class="col-sm-6 form-row">
                             <label class="col-sm-6" >Work Activity Name:</label>
-                            <input class="col-sm-6" type="text" id="inputSaving" name="work_activity[]" value="<?php echo $name;?>" placeholder="" required>
+                            <input class="col-sm-6" type="text" id="inputSaving" name="work_activity[]" value="" placeholder="" required>
                         </div>
                        <div class="clearfix"></div>
                        <hr class="add_activity"/>
