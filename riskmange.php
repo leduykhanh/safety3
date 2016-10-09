@@ -73,10 +73,10 @@ define('NON_ACTIVE', 0);
   {
 
      $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', '', '', '', '".$status."');";
-
+     echo $riskassessment;
       $insert_riskassessment=mysqli_query($con, $riskassessment);
       $riskassessmentId = mysqli_insert_id($con);
-
+      echo $riskassessmentId;
       //insert all the ra members
        foreach ($_POST['RA_Member'] as $RA_Member)
         {
