@@ -400,13 +400,26 @@ $('.severity').on('change', function()
 	$('#add_others_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_'+add_others+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_'+add_others+'" name="ExistingRiskControl['+work_activity+']['+hazards+'][c_t_'+add_others+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_'+add_others+' remove_other_data" data-id ="add_others_'+work_activity+'_'+hazards+'" data-remove="c_t_'+add_others+'"> Remove</a> <br />');
 	});
 
+  $(document).on("click",'.add_others_injury',function(e){
+ 	var work_activity = $(this).attr('data-wrk');
+ 	var hazards = $(this).attr('data-haz');
+ 	var add_others_injury = $('#add_others_injury'+work_activity+'_'+hazards+'>input').length +1;
+ 	$('#add_others_injury'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_'+add_others_injury+'" name="ExistingRiskControl['+work_activity+']['+hazards+'][c_t_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_'+add_others_injury+'"> Remove</a> <br />');
+ 	});
+
 $(document).on("click",".remove_other_data",function(e){
 	var data_remove = $(this).attr("data-remove");
 	var data_id = $(this).attr("data-id");
 	$("#"+data_id+" ."+data_remove).remove();
 
 });
+$(document).on("click",".remove_other_injury",function(e){
+	var data_remove = $(this).attr("data-remove");
+	var data_id = $(this).attr("data-id");
+  console.log("#"+data_id+" ."+data_remove);
+	$("#"+data_id+" ."+data_remove).remove();
 
+});
 
 
 /*$('.date').each(function(e){
