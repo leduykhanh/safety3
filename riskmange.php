@@ -14,6 +14,7 @@ define('NON_ACTIVE', 0);
   $i = 0;
   $k = 1; // this is for keep track of j and loop from next level
   $l = 1; //for action officer
+  $m = 1; // For other injuries
 
 
     $creationDates = new DateTime($_POST['creationDate']);
@@ -75,7 +76,7 @@ define('NON_ACTIVE', 0);
      $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`,`expiry_date`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, NULL, NULL, '".$status."',".$_POST["expiry_date"].");";
       $insert_riskassessment=mysqli_query($con, $riskassessment);
       $riskassessmentId = mysqli_insert_id($con);
-      echo $riskassessmentId;
+
       //insert all the ra members
        foreach ($_POST['RA_Member'] as $RA_Member)
         {
@@ -106,7 +107,7 @@ define('NON_ACTIVE', 0);
               $actonDateToInsert = new DateTime($actionDate);
               $actonDateNow = date_format($actonDateToInsert, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
 
-			$ExistingRiskControl = serialize($_POST['ExistingRiskControl'][$i][$j]);
+			        $ExistingRiskControl = serialize($_POST['ExistingRiskControl'][$i][$j]);
 
 
             $sqlHazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`) VALUES (NULL, '".$workActivityId."', '".$_POST['Hazard'][$k]."', '".$_POST['severity'][$k]."', '".$_POST['severitySecond'][$k]."', '".$_POST['InjuryAccident'][$k]."', '".$_POST['likelihood'][$k]."', '".$_POST['likelihoodSecond'][$k]."', '".$ExistingRiskControl."', '".$_POST['riskLevel'][$k]."', '".$_POST['additionalRiskContro'][$k]."', '', '".$actonDateNow."', '0');";

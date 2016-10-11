@@ -404,7 +404,7 @@ $('.severity').on('change', function()
  	var work_activity = $(this).attr('data-wrk');
  	var hazards = $(this).attr('data-haz');
  	var add_others_injury = $('#add_others_injury_'+work_activity+'_'+hazards+'>input').length +1;
- 	$('#add_others_injury_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_injury+'" name="PossibleInjury['+work_activity+']['+hazards+'][c_t_j_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_j_'+add_others_injury+'"> Remove</a> <br />');
+ 	$('#add_others_injury_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_injury+'" name="InjuryAccidentOthers['+work_activity+']['+hazards+'][c_t_j_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_j_'+add_others_injury+'"> Remove</a> <br />');
  	});
 
 $(document).on("click",".remove_other_data",function(e){
@@ -566,9 +566,9 @@ alert(attrName);
 
                     <div class="col-sm-12">
                         <hr class="add_risk" />
-                        <div class="col-sm-6 form-row">
-                            <label class="col-sm-6">Work Activity Name:</label>
-                            <input class="col-sm-6" type="text" id="inputSaving" name="work_activity[]" value="<?php echo $name;?>" placeholder="" required>
+                        <div class="col-sm-12 form-row">
+                            <label class="col-sm-3">Work Activity Name:</label>
+                            <input class="col-sm-8" type="text" id="inputSaving" name="work_activity[]" value="" placeholder="" required>
                         </div>
                        <div class="clearfix"></div>
                        <hr class="add_activity"/>
@@ -689,7 +689,7 @@ alert(attrName);
                           <div class="form-row">
                             <label class="col-sm-6">Additional Risk Control:</label>
 
-                            <textarea class="col-sm-6" type="text" id="inputSaving" name="additionalRiskContro[]" style="height:65px;"></textarea>
+                            <textarea class="col-sm-6" type="text" id="inputSaving" name="additionalRiskContro[]" rows="5"></textarea>
 
 
                           </div>
@@ -792,9 +792,9 @@ alert(attrName);
 
                     <div class="col-sm-12">
                         <hr class="add_risk" />
-                        <div class="col-sm-6 form-row">
-                            <label class="col-sm-6" >Work Activity Name:</label>
-                            <input class="col-sm-6" type="text" id="inputSaving" name="work_activity[]" value="" placeholder="" required>
+                        <div class="col-sm-12 form-row">
+                            <label class="col-sm-3" >Work Activity Name:</label>
+                            <input class="col-sm-8" type="text" id="inputSaving" name="work_activity[]" value="" placeholder="" required>
                         </div>
                        <div class="clearfix"></div>
                        <hr class="add_activity"/>
@@ -910,7 +910,7 @@ alert(attrName);
                           <div class="form-row">
                             <label class="col-sm-6">Additional Risk Control:</label>
 
-                            <textarea class="col-sm-6" type="text" id="inputSaving" name="additionalRiskContro[]" style="height:65px;"></textarea>
+                            <textarea class="col-sm-6" type="text" id="inputSaving" name="additionalRiskContro[]" rows="5"></textarea>
 
 
                           </div>
@@ -969,8 +969,8 @@ alert(attrName);
                                         <label class="col-sm-6">Action Officer:</label>
                                         <select name="actionOfficer[]"   class="col-sm-6" >
                                             <option value="-">Select Action Officer</option>
-                                            <option value="name1">W. K. Chan</option>
-                                            <option value="name2">Liang Kan Fat</option>
+                                            <option value="W. K. Chan">W. K. Chan</option>
+                                            <option value="Liang Kan Fat">Liang Kan Fat</option>
                                         </select>
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>

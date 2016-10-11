@@ -373,10 +373,10 @@ td p{
 										{
 											if(substr($existing_risk_key, 0, 3) === "c_t")
 											{
-												echo "<strong>".$existing_risk[$existing_risk_key]."</strong> <br>";
+												echo "- <strong>".$existing_risk[$existing_risk_key]."</strong> <br>";
 											}
 											else{
-												echo $existing_risk_control[$hzardsValue['name']][$existing_risk_value] ."<br>";
+												echo "- ".$existing_risk_control[$hzardsValue['name']][$existing_risk_value] ."<br>";
 											}
 										}
 									}

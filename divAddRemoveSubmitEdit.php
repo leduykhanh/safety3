@@ -598,8 +598,8 @@ $cntval = 1;
                                         <label class="col-sm-6">Action Officer:</label>
                                         <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
                                             <option value="">Select Action Officer</option>
-                                            <option value="action_officer1" <?php echo ($valueActionOfficer['name'] == "action_officer1")?'selected="selected"' : ''; ?>>W. K. Chan</option>
-                                            <option value="action_officer2" <?php echo ($valueActionOfficer['name'] == "action_officer2")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
+                                            <option value="W. K. Chan" <?php echo ($valueActionOfficer['name'] == "W. K. Chan")?'selected="selected"' : ''; ?>>W. K. Chan</option>
+                                            <option value="Liang Kan Fat" <?php echo ($valueActionOfficer['name'] == "Liang Kan Fat")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
                                         </select>
                                       </div>
                                     </div>

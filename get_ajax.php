@@ -22,6 +22,7 @@ if($_POST){
 
                            $output .= '</select>
 													 <div id="add_others_injury_'.$work_activity.'_'.$hazard.'"></div>
+													 <input type="hidden" name="hazardsOthersInjuryCount[]" id="hazardsOthersInjuryCount" value="1" />
 													 <div class="row"><input type="button" class="col-sm-3 btn btn-primary add_others_injury" data-wrk ="'.$work_activity.'" data-haz ="'.$hazard.'" value="Add others"  /></div>
 													 </div>
 													 ';
