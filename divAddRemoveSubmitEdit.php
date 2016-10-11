@@ -237,7 +237,6 @@ while($valueAllWork = mysqli_fetch_assoc($resultAllWork))
 {
 ?>        <div id="clonedInput1" class="col-sm-12 form_pad clonedInput repeatingSection">
               <div class="col-sm-7"><h3 class="workActivityName">Work Activity <?php echo $wrk_act;?></h3></div>
-                <div class="5">
                    <button class="col-sm-2 btn btn-success addWorkActivity" id="add_new_work" style="margin-top:15px;">+ Add a new work activity</button>
 
                    <input type="hidden" name="workactivity_a_id_1" id="workactivity_a_id_1" value="" />
@@ -261,10 +260,10 @@ while($valueAllWork = mysqli_fetch_assoc($resultAllWork))
                    <input type="hidden"  id="work_activity_id" value="<?php echo $wrk_act; ?>" />
 
                   <button class="col-sm-2 btn btn-danger  deleteWorkActivity" style="margin-left:5px; margin-top:15px;">Remove work activity</button>
-                </div>
-                    <hr class="add_risk" />
+
                     <div class="row">
                     <div class="col-sm-12">
+                      <hr class="add_risk" />
                         <div class="row">
                         <div class="col-sm-12 form-row">
                         <div class="row">
