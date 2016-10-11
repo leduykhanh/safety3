@@ -126,7 +126,6 @@ $('.addMember').click(function(e){
 
     });
 
-
     $('.deleteMember').click(function(e){
         e.preventDefault();
         var current_fight = $(this).parent('div');
@@ -226,15 +225,35 @@ $('.addActionMember').click(function(e){
 
 
         var lastRepeatingGroup = $('.repeatingActionOfficer').last();
-        var cloned = lastRepeatingGroup.clone(true)
+        var cloned = lastRepeatingGroup.clone(true);
 
 
         cloned.insertAfter($(this).parent('div'));
-        resetHazaradsAttributeNames(cloned)
+        resetHazaradsAttributeNames(cloned);
     });
+    $('.addOtherActionMember').click(function(e){
+            e.preventDefault();
+
+            var currentHazardsActionOfficerCount = $(this).parent().parent().find('#hazardsActionOfficerCount').val();
+
+            if(currentHazardsActionOfficerCount >= 5)
+            {
+               alert("You can't add more than 5 Action Officers");
+                return;
+            }
+
+            var nextHazardsActionOfficerCount = parseInt(currentHazardsActionOfficerCount) + 1;
+            $(this).parent().parent().find('#hazardsActionOfficerCount').val(nextHazardsActionOfficerCount);
+
+            var lastRepeatingGroup = $('.repeatingOtherActionOfficer').last();
+            var cloned = lastRepeatingGroup.clone(true)
+            cloned.insertAfter($(this).parent('div'));
+            resetHazaradsAttributeNames(cloned);
+        });
 
 $('.deleteActonOfficer').click(function(e){
         e.preventDefault();
+        console.log("called");
         var current_fight = $(this).parent('div');
         var other_fights = current_fight.siblings('.repeatingActionOfficer');
         if (other_fights.length === 0) {
@@ -749,6 +768,7 @@ alert(attrName);
                                 <div class="row col-sm-12 form-row">
 
                                     <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
+                                    <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
                                 </div>
                                 <div id="clonedInput1" class="row repeatingActionOfficer">
 
@@ -762,6 +782,17 @@ alert(attrName);
                                         </select>
                                     </div>
                                      <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
+                                </div>
+                                <div style="display:none">
+                                  <div class="row repeatingOtherActionOfficer">
+
+                                      <div class="col-sm-6">
+
+                                          <label class="col-sm-6">Action Officer:</label>
+                                            <input type="text" name="actionOfficer[]"   class="col-sm-6" >
+                                      </div>
+                                       <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
+                                  </div>
                                 </div>
                             </div>
 
@@ -967,8 +998,8 @@ alert(attrName);
                             <div class="col-sm-12 form-row">
                              <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="1" />
                                 <div class="row col-sm-12 form-row">
-
                                     <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
+                                    <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
                                 </div>
                                 <div id="clonedInput1" class="row repeatingActionOfficer">
 

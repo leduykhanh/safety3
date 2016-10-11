@@ -266,10 +266,10 @@ while($valueAllWork = mysqli_fetch_assoc($resultAllWork))
                     <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
-                        <div class="col-sm-6 form-row">
+                        <div class="col-sm-12 form-row">
                         <div class="row">
-                            <label class="col-sm-6" style="padding-left:29px;">Work Activity Name:</label>
-                            <input class="col-sm-6" type="text" id="inputSaving" name="work_activity[]" value="<?php echo $valueAllWork['name'];?>" placeholder="" style="width:48%; margin-left:9px;" required>
+                            <label class="col-sm-3" style="padding-left:29px;">Work Activity Name:</label>
+                            <input class="col-sm-8" type="text" id="inputSaving" name="work_activity[]" value="<?php echo $valueAllWork['name'];?>" placeholder="" style="margin-left:9px;" required>
                         </div>
                         </div>
                         </div>
@@ -311,7 +311,7 @@ $cntval = 1;
                           </div>
                           <?php if ($valueAllHazards['name']=="other"){ ?>
                           <div class="form-row other_hazard" style="display:block">
-                            <input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_h_1" name="HazardOther[]" value="<?php echo $valueAllHazards['name_other']; ?>"/>
+                            <input style="width: 82%;float: left;margin: 0px 5px 5px 15px;"  type="text" class="with_textbox_value c_t_h_1" name="HazardOther[]" value="<?php echo $valueAllHazards['name_other']; ?>"/>
                           </div>
                           <?php } ?>
 
@@ -333,6 +333,11 @@ $cntval = 1;
 								?>
                             </select>
 
+                          </div>
+                          <div class="row">
+                            <div id="add_others_injury_<?php echo $wrk_act; ?>_<?php echo $wrk_act; ?>"></div>
+                            <input type="hidden" name="hazardsOthersInjuryCount[]" id="hazardsOthersInjuryCount" value="1" />
+                            <input type="button" class="col-sm-3 btn btn-primary add_others_injury" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $wrk_act; ?>" value="Add others"  />
                           </div>
                           <?php if(count($resultAllHazardInjuryOthers)>0){
                             // echo "<div class='col-sm-12' > Others </div>";
@@ -533,7 +538,7 @@ $cntval = 1;
                           <div class="row">
                             <label class="col-sm-6">Additional Risk Control:</label>
 
-                          <textarea  type="text" class="col-sm-6" id="inputSaving" name="additionalRiskContro[]" style="height:65px;"><?php echo $valueAllHazards['risk_additional'];?></textarea>
+                          <textarea  type="text" class="col-sm-6" id="inputSaving" name="additionalRiskContro[]" rows="5"><?php echo $valueAllHazards['risk_additional'];?></textarea>
 
 
                           </div>
@@ -753,6 +758,12 @@ function risk_control(this_value,class_value)
   //  $('#edit-submitted-first-name').prop('required', false);
 function get_injuery(main,thisvalue,option_id,wrk,haz)
 {
+  if (thisvalue === "other") {
+    $(main).parent().parent().find(".other_hazard").css("display","block");
+    // return;
+  }
+  else
+    $(main).parent().parent().find(".other_hazard").css("display","none");
 	$(main).parent().find(".ajax_loader").css("display","block");
 	$.ajax({
 		type:"POST",

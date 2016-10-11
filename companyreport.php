@@ -349,7 +349,8 @@ td p{
                     while($hzardsValue = mysqli_fetch_assoc($resultAllHazards))
 
                     {
-
+                      $getAllHazardInjuryOthersSql = "SELECT * FROM `injury_hazard` WHERE `hazard_id` = ".$hzardsValue['hazard_id']."";
+                      $resultAllHazardInjuryOthers=mysqli_query($con, $getAllHazardInjuryOthersSql);
                         if($hazrdsControl == 1)
                         {
 
@@ -358,10 +359,19 @@ td p{
                                 <tr>
                                     <td rowspan="<?php echo $totalHazards;?>" colspan="1"> <?php echo $m; ?></td>
                                     <td rowspan="<?php echo $totalHazards;?>" colspan="1">  <?php echo $valueAllWork['name'];?></td>
-                                    <td rowspan="1" colspan="1"> <?php echo $harzard[$hzardsValue['name']];?></td>
+                                    <td rowspan="1" colspan="1">
+                                      <?php echo $hzardsValue['name']!=="other"?$harzard[$hzardsValue['name']]:$hzardsValue['name_other'];?>
+                                    </td>
 
-
-                                    <td rowspan="1" colspan="1" style="text-align: justify;"> <?php echo $injury[$hzardsValue['accident']];?> </td>
+                                    <td rowspan="1" colspan="1" style="text-align: justify;">
+                                      <?php echo $hzardsValue['accident']!==""?$injury[$hzardsValue['accident']]:"";
+                                      if(count($resultAllHazardInjuryOthers)>0){
+                                        // echo "<div class='col-sm-12' > Others </div>";
+                                        foreach ($resultAllHazardInjuryOthers as $v) {
+                                          echo "- ".$v["injury"]." <br />";
+                                        }
+                                      }?>
+                                    </td>
 
                                     <td rowspan="1" colspan="1" style="text-align: justify;">
 
