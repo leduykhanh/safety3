@@ -1,4 +1,9 @@
 <?php
+$raMembers = array(
+	"name1" => "W. K. Chan",
+	"name2" => "Liang Kan Fat",
+	"" => ""
+);
 $harzard = array(
 	"w_h_l_3m"	=> "Hazard -Working at height (less than 3m)",
 	"w_h_m_3m"	=> "Working at height (more than 3m)",

@@ -229,18 +229,18 @@ td p{
                  <tr>
                      <td rowspan="1" colspan="1" style="width:15%">Process:</td>
                      <td rowspan="1" colspan="1" style="width:20%"><?php echo wordwrap ($risk['process'], 15, "\n", 1);?></td>
-                     <td rowspan="1" colspan="1" style="width:25%">RA Member 1: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
+                     <td rowspan="1" colspan="1" style="width:25%">RA Member 1: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];?></td>
                 </tr>
                 <tr>
                      <td rowspan="1" colspan="1"style="width:15%">Process / Activity Location:</td>
                      <td rowspan="1" colspan="1" style="width:20%" ><?php echo $risk['location'];?></td>
-                     <td rowspan="1" colspan="1" style="width:25%">RA Member 2: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
+                     <td rowspan="1" colspan="1" style="width:25%">RA Member 2: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];?></td>
                 </tr>
 
                 <tr>
                      <td rowspan="1" colspan="1" style="width:15%">Original Assessment Date:</td>
                      <td rowspan="1" colspan="1" style="width:20%"><?php echo $date = date('d-m-Y', strtotime($risk['createdDate']));?></td>
-                     <td rowspan="1" colspan="1" style="width:25%">RA Member 3:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMember['name'];?></td>
+                     <td rowspan="1" colspan="1" style="width:25%">RA Member 3:<?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];?></td>
                      <td rowspan="1" colspan="1" style="width:15%">Name:</td>
                      <td rowspan="1" colspan="1" style="width:15%"><?php if($risk['status'] ==2){ echo $signee['name'];}?></td>
                 </tr>
