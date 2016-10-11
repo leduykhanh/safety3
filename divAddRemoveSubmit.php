@@ -403,9 +403,16 @@ $('.severity').on('change', function()
   $(document).on("click",'.add_others_injury',function(e){
  	var work_activity = $(this).attr('data-wrk');
  	var hazards = $(this).attr('data-haz');
- 	var add_others_injury = $('#add_others_injury'+work_activity+'_'+hazards+'>input').length +1;
- 	$('#add_others_injury'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_'+add_others_injury+'" name="ExistingRiskControl['+work_activity+']['+hazards+'][c_t_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_'+add_others_injury+'"> Remove</a> <br />');
+ 	var add_others_injury = $('#add_others_injury_'+work_activity+'_'+hazards+'>input').length +1;
+ 	$('#add_others_injury_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_injury+'" name="PossibleInjury['+work_activity+']['+hazards+'][c_t_j_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_j_'+add_others_injury+'"> Remove</a> <br />');
  	});
+  $(document).on("click",'.add_others_hazard',function(e){
+  var work_activity = $(this).attr('data-wrk');
+  var hazards = $(this).attr('data-haz');
+  var add_others_injury = $('#add_others_hazard'+work_activity+'_'+hazards+'>input').length +1;
+  $('#add_others_hazard'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_hazard+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_hazard+'" name="PossibleInjury['+work_activity+']['+hazards+'][c_t_j_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_h_'+add_others_hazard+' remove_other_injury" data-id ="add_others_hazard_'+work_activity+'_'+hazards+'" data-remove="c_t_h_'+add_others_hazard+'"> Remove</a> <br />');
+  });
+
 
 $(document).on("click",".remove_other_data",function(e){
 	var data_remove = $(this).attr("data-remove");
@@ -416,7 +423,6 @@ $(document).on("click",".remove_other_data",function(e){
 $(document).on("click",".remove_other_injury",function(e){
 	var data_remove = $(this).attr("data-remove");
 	var data_id = $(this).attr("data-id");
-  console.log("#"+data_id+" ."+data_remove);
 	$("#"+data_id+" ."+data_remove).remove();
 
 });
@@ -586,11 +592,11 @@ alert(attrName);
                             <select class="col-sm-6" name="Hazard[]"  id="get_injury_dynamic" >
                             	<option value="">Choose Hazard</option>
                                 <?php
-								foreach($harzard as $harzard_key => $harzard_value)
-								{
-									echo "<option value=\"".$harzard_key."\">".$harzard_value."</option>";
-								}
-								?>
+                								foreach($harzard as $harzard_key => $harzard_value)
+                								{
+                									echo "<option value=\"".$harzard_key."\">".$harzard_value."</option>";
+                								}
+                								?>
 
 
                             </select>
@@ -598,6 +604,7 @@ alert(attrName);
                             	<img src="ajax-loader.gif" />
                             </div>
                           </div>
+
                           <div class="generate_dynamic_content">
                           <select class="col-sm-6" name="InjuryAccident[]" >
                           <option value="">Choose InjuryAccident</option>';
@@ -821,6 +828,10 @@ alert(attrName);
                                <div class="ajax_loader" style="display:none;position: absolute;right: 0;">
                                     <img src="ajax-loader.gif" />
                                 </div>
+                          </div>
+                          <div id="add_others_injury_1_1"></div>
+                          <div class="row">
+                            <input type="button" class="col-sm-3 btn btn-primary add_others_hazard" data-wrk ="'.$work_activity.'" data-haz ="'.$hazard.'" value="Add others"  />
                           </div>
                         <div id="dynamic_data_control_injuery_1_1">
 
