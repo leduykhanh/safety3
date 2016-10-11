@@ -14,7 +14,7 @@ define('NON_ACTIVE', 0);
   $i = 0;
   $k = 1; // this is for keep track of j and loop from next level
   $l = 1; //for action officer
-  $m = 1; // For other injuries
+  $m = 0; // For other injuries
 
 
     $creationDates = new DateTime($_POST['creationDate']);
@@ -110,7 +110,9 @@ define('NON_ACTIVE', 0);
 			        $ExistingRiskControl = serialize($_POST['ExistingRiskControl'][$i][$j]);
 
 
-            $sqlHazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`) VALUES (NULL, '".$workActivityId."', '".$_POST['Hazard'][$k]."', '".$_POST['severity'][$k]."', '".$_POST['severitySecond'][$k]."', '".$_POST['InjuryAccident'][$k]."', '".$_POST['likelihood'][$k]."', '".$_POST['likelihoodSecond'][$k]."', '".$ExistingRiskControl."', '".$_POST['riskLevel'][$k]."', '".$_POST['additionalRiskContro'][$k]."', '', '".$actonDateNow."', '0');";
+            $sqlHazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`,`name_other`)
+            VALUES (NULL, '".$workActivityId."', '".$_POST['Hazard'][$k]."', '".$_POST['severity'][$k]."', '".$_POST['severitySecond'][$k]."', '".$_POST['InjuryAccident'][$k]."', '".$_POST['likelihood'][$k]."',
+             '".$_POST['likelihoodSecond'][$k]."', '".$ExistingRiskControl."', '".$_POST['riskLevel'][$k]."', '".$_POST['additionalRiskContro'][$k]."', '', '".$actonDateNow."', '0','".$_POST['HazardOther'][$k]."');";
 
 
 
@@ -131,7 +133,19 @@ define('NON_ACTIVE', 0);
                    $l++;
 
                   }
+              //insert other injuries
+              $numOfOtherInjuries = $_POST['hazardsOthersInjuryCount'][$k-1];
 
+                  for($numOfInjury = 1; $numOfInjury <= $numOfOtherInjuries; $numOfInjury++)
+                   {
+
+
+                    $sqlHazardsActionOfficer = "INSERT INTO `injury_hazard` (`id`, `hazard_id`, `injury`) VALUES (NULL, '".$insertHazardsId."', '".$_POST['InjuryAccidentOthers'][$m]."')";
+                    mysqli_query($con, $sqlHazardsActionOfficer);
+
+                    $m++;
+
+                   }
 
                 $k++;
 
@@ -156,7 +170,7 @@ if(isset($insertHazardsId))
 
   if($_POST['saveAsDraft'] == 'Next')
   {
-    echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
+    // echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
   }
   else
   {

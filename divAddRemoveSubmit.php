@@ -26,7 +26,8 @@ $harzard = array(
   "w_a_h_s" => "Working at height (using sisscor lift)",
   "w_a_h_sf" => "Working at height (using scaffold)",
   "p_p_f_l_o" => "Poor planning for lfting operation",
-  "f_p" => "Flying particles"
+  "f_p" => "Flying particles",
+  "other" => "Other"
 );
 ?>
   <style type="text/css">
@@ -401,10 +402,14 @@ $('.severity').on('change', function()
 	});
 
   $(document).on("click",'.add_others_injury',function(e){
- 	var work_activity = $(this).attr('data-wrk');
+    var currenthazardsOthersInjuryCount = $(this).parent().find('#hazardsOthersInjuryCount').val();
+    var nexthazardsOthersInjuryCounts = parseInt(currenthazardsOthersInjuryCount) + 1;
+    $(this).parent().find('#hazardsOthersInjuryCount').val(nexthazardsOthersInjuryCounts);
+
+  var work_activity = $(this).attr('data-wrk');
  	var hazards = $(this).attr('data-haz');
  	var add_others_injury = $('#add_others_injury_'+work_activity+'_'+hazards+'>input').length +1;
- 	$('#add_others_injury_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_injury+'" name="InjuryAccidentOthers['+work_activity+']['+hazards+'][c_t_j_'+add_others_injury+']" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_j_'+add_others_injury+'"> Remove</a> <br />');
+ 	$('#add_others_injury_'+work_activity+'_'+hazards).append('<label style=" float: left;width: 100%;" class="c_t_j_'+add_others_injury+'">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_j_'+add_others_injury+'" name="InjuryAccidentOthers[]" value=""/><a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'+add_others_injury+' remove_other_injury" data-id ="add_others_injury_'+work_activity+'_'+hazards+'" data-remove="c_t_j_'+add_others_injury+'"> Remove</a> <br />');
  	});
 
 $(document).on("click",".remove_other_data",function(e){
@@ -597,7 +602,10 @@ alert(attrName);
                             	<img src="ajax-loader.gif" />
                             </div>
                           </div>
-
+                          <div class="form-row other_hazard" style="display:none">
+                            <label style=" float: left;width: 100%;" >If others, please specify</label>
+                            <input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_h_1" name="HazardOther[]" value=""/>
+                          </div>
                           <div class="generate_dynamic_content">
                           <select class="col-sm-6" name="InjuryAccident[]" >
                           <option value="">Choose InjuryAccident</option>';
@@ -822,8 +830,8 @@ alert(attrName);
                                     <img src="ajax-loader.gif" />
                                 </div>
                           </div>
-                          <div class="form-row">
-                            <label style=" float: left;width: 100%;" class="c_t_h_1">If others, please specify</label>
+                          <div class="form-row other_hazard" style="display:none">
+                            <label style=" float: left;width: 100%;" >If others, please specify</label>
                             <input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_h_1" name="HazardOther[]" value=""/>
                           </div>
                         <div id="dynamic_data_control_injuery_1_1">
@@ -1065,6 +1073,12 @@ function risk_control(this_value,class_value)
   //  $('#edit-submitted-first-name').prop('required', false);
 function get_injuery(main,thisvalue,option_id,wrk,haz)
 {
+  if (thisvalue === "other") {
+    $(main).parent().parent().find(".other_hazard").css("display","block");
+    // return;
+  }
+  else
+    $(main).parent().parent().find(".other_hazard").css("display","none");
 	$(main).parent().find(".ajax_loader").css("display","block");
 	$.ajax({
 		type:"POST",

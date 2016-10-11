@@ -283,6 +283,8 @@ while($valueAllWork = mysqli_fetch_assoc($resultAllWork))
 $cntval = 1;
   while($valueAllHazards = mysqli_fetch_assoc($resultAllHazards))
   {
+    $getAllHazardInjuryOthersSql = "SELECT * FROM `injury_hazard` WHERE `hazard_id` = ".$valueAllHazards['hazard_id']."";
+    $resultAllHazardInjuryOthers=mysqli_query($con, $getAllHazardInjuryOthersSql);
   ?>
 
                   <div class="col-sm-12 hazardSection">
@@ -307,6 +309,11 @@ $cntval = 1;
                                     <img src="ajax-loader.gif" />
                                 </div>
                           </div>
+                          <?php if ($valueAllHazards['name']=="other"){ ?>
+                          <div class="form-row other_hazard" style="display:block">
+                            <input style="width: 82%;float: left;margin: 0px 5px 5px 0px;"  type="text" class="with_textbox_value c_t_h_1" name="HazardOther[]" value="<?php echo $valueAllHazards['name_other']; ?>"/>
+                          </div>
+                          <?php } ?>
 
                           <div id="dynamic_data_control_injuery_<?php echo $wrk_act; ?>_<?php echo $cntval;?>">
                            <div class="row">
@@ -327,6 +334,12 @@ $cntval = 1;
                             </select>
 
                           </div>
+                          <?php if(count($resultAllHazardInjuryOthers)>0){
+                            // echo "<div class='col-sm-12' > Others </div>";
+                            foreach ($resultAllHazardInjuryOthers as $v) {
+                              echo "<input type='text' class='col-sm-12' value=".$v["injury"]." >";
+                            }
+                          } ?>
                          <div class="row">
                             <label class="col-sm-6">Existing Risk Control:</label>
                             <?php

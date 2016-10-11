@@ -25,7 +25,8 @@ $harzard = array(
 	"w_a_h_s" => "Working at height (using sisscor lift)",
 	"w_a_h_sf" => "Working at height (using scaffold)",
 	"p_p_f_l_o" => "Poor planning for lfting operation",
-	"f_p" => "Flying particles"
+	"f_p" => "Flying particles",
+	"other" => "Other"
 );
 $injury =array(
 				"0"=>"Fatality(5)",
@@ -320,5 +321,6 @@ $existing_risk_control=array(
 				"3" =>	"Use of dust mask",
 				"4" =>	"Use of Safety helmet",
 				"5" =>	"Supervisor to enforce all workers are using safety glassess",
-	)
+	),
+	"other" => array()
 );
