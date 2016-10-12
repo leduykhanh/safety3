@@ -350,49 +350,51 @@ $cntval = 1;
                             <label class="col-sm-6">Existing Risk Control:</label>
                             <?php
                             if($valueAllHazards['name']!=="other"){
-              							$e_r_c = $existing_risk_control[$valueAllHazards['name']];
-              							$existing_riskcontroll = unserialize($valueAllHazards['risk_control']);
+                							$e_r_c = $existing_risk_control[$valueAllHazards['name']];
+                							$existing_riskcontroll = unserialize($valueAllHazards['risk_control']);
 
-              							?>
-                             <div class="col-sm-12">
-                             <?php if($e_r_c != "") {	?>
-                                   <div class="checkbox">
-                                        <label><input type="checkbox" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][]"  value="select_all" onclick="risk_control(this,'risk_control_<?php echo $wrk_act; ?>_<?php echo $cntval;?>');" <?php echo ($existing_riskcontroll != "") ?(in_array("select_all",$existing_riskcontroll)) ? 'checked="checked"' : "" : "" ?>>Select All</label>
-                                    </div>
-                                    <?php
-              									 foreach($e_r_c as $key_get_e_r_c  => $value_get_e_r_c)
-              									{
-              										$selected = ($existing_riskcontroll != "") ?(in_array($key_get_e_r_c,$existing_riskcontroll)) ? 'checked="checked"' : "" : "";
-              									echo  '<div class="checkbox">
-                                                      <label><input type="checkbox" class="risk_control_'.$wrk_act.'_'.$cntval.'" name="ExistingRiskControl['.$wrk_act.']['.$cntval.'][]"  value="'.$key_get_e_r_c.'" '.$selected.' >'.$value_get_e_r_c.'</label>
-                                                  </div>   ';
-              										}
-              									?>
-                                                  <label style=" float: left;width: 100%;">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" class="with_textbox_value" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][c_t]" value="<?php echo $existing_riskcontroll["c_t"] ?>"/>
-                                                  <?php } ?>
-                                                  <div id="add_others_<?php echo $wrk_act; ?>_<?php echo $cntval ?>">
-                                                  <?php
-              									if($existing_riskcontroll != ""){
-              									 foreach($existing_riskcontroll as $key_e_r_c  => $value_e_r_c)
-              									{
+                							?>
+                                             <div class="col-sm-12">
+                                             <?php if($e_r_c != "") {	?>
+                                                   <div class="checkbox">
+                                                        <label><input type="checkbox" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][]"  value="select_all" onclick="risk_control(this,'risk_control_<?php echo $wrk_act; ?>_<?php echo $cntval;?>');" <?php echo ($existing_riskcontroll != "") ?(in_array("select_all",$existing_riskcontroll)) ? 'checked="checked"' : "" : "" ?>>Select All</label>
+                                                    </div>
+                                                    <?php
+                									 foreach($e_r_c as $key_get_e_r_c  => $value_get_e_r_c)
+                									{
+                										$selected = ($existing_riskcontroll != "") ?(in_array($key_get_e_r_c,$existing_riskcontroll)) ? 'checked="checked"' : "" : "";
+                									echo  '<div class="checkbox">
+                                                        <label><input type="checkbox" class="risk_control_'.$wrk_act.'_'.$cntval.'" name="ExistingRiskControl['.$wrk_act.']['.$cntval.'][]"  value="'.$key_get_e_r_c.'" '.$selected.' >'.$value_get_e_r_c.'</label>
+                                                    </div>   ';
+                										}
+                									?>
+                                                    <label style=" float: left;width: 100%;">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" class="with_textbox_value" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][c_t]" value="<?php echo $existing_riskcontroll["c_t"] ?>"/>
+                                                    <?php } ?>
+                                                    <div id="add_others_<?php echo $wrk_act; ?>_<?php echo $cntval ?>">
+                                                    <?php
+                									if($existing_riskcontroll != ""){
+                									 foreach($existing_riskcontroll as $key_e_r_c  => $value_e_r_c)
+                									{
 
-              										if(substr($key_e_r_c, 0, 4) === "c_t_")
-              										{
-              										if($existing_riskcontroll[$key_e_r_c] != ""){
-              										?>
+                										if(substr($key_e_r_c, 0, 4) === "c_t_")
+                										{
+                										if($existing_riskcontroll[$key_e_r_c] != ""){
+                										?>
 
-                                                      <label class="<?php echo $key_e_r_c;?>"  style=" float: left;width: 100%;">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" class="with_textbox_value <?php echo $key_e_r_c;?>" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][<?php echo $key_e_r_c;?>]" value="<?php echo $existing_riskcontroll[$key_e_r_c] ?>"/> <a style=" float:left;" href="javascript:void(0)" data-id="add_others_<?php echo $wrk_act; ?>_<?php echo $cntval ?>" class="btn btn-danger <?php echo $key_e_r_c;?> remove_other_data" data-remove="<?php echo $key_e_r_c;?>"> Remove</a>
-                                                      <br />
-                                                <?php }
-              									}
-              								  }
-              								}?>
-                                                </div>
-               <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $cntval ?>" value="Add others"  />
-                                </div>
-                              <?php }else{
-                                echo '<textarea class="col-sm-6" type="text" id="inputSaving" name="ExistingRiskControl['.$wrk_act.']['.$cntval.']" rows="5"></textarea>';
+                                                        <label class="<?php echo $key_e_r_c;?>"  style=" float: left;width: 100%;">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" class="with_textbox_value <?php echo $key_e_r_c;?>" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][<?php echo $key_e_r_c;?>]" value="<?php echo $existing_riskcontroll[$key_e_r_c] ?>"/> <a style=" float:left;" href="javascript:void(0)" data-id="add_others_<?php echo $wrk_act; ?>_<?php echo $cntval ?>" class="btn btn-danger <?php echo $key_e_r_c;?> remove_other_data" data-remove="<?php echo $key_e_r_c;?>"> Remove</a>
+                                                        <br />
+                                                  <?php }
+                									        }
+                								  }
+                								}
+                              }
+                              else{
+                                echo '<textarea class="col-sm-12" type="text" id="inputSaving" name="ExistingRiskControl['.$wrk_act.']['.$cntval.']" rows="5"></textarea>';
                               }?>
+                                  
+ <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $cntval ?>" value="Add others"  />
+                            </div>
+
 
                           </div>
 						  </div>
