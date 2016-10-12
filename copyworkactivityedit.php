@@ -185,25 +185,37 @@
 
                        <hr class="add_activity"/>
 
-                      <div>
-                       <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="1" />
-<div id="clonedInput1" class="row repeatingActionOfficer">
+                      <div class="col-sm-12 row form-row">
+                        <div class="col-sm-12 form-row">
+                          <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
+                          <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
+                          <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="1" />
+                        </div>
 
-     <div class="col-sm-6">
-        <div class="row">
-          <label class="col-sm-6">Action Officer:</label>
-            <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
-                <option value="-">Select Action Officer</option>
-                <option value="name1">W. K. Chan</option>
-                <option value="name2">Liang Kan Fat</option>
-            </select>
+                        <div id="clonedInput1" class="row repeatingActionOfficer">
 
-         </div>
-      </div>
+                             <div class="col-sm-6">
+                                  <label class="col-sm-6">Action Officer:</label>
+                                    <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
+                                        <option value="-">Select Action Officer</option>
+                                        <option value="name1">W. K. Chan</option>
+                                        <option value="name2">Liang Kan Fat</option>
+                                    </select>
+                              </div>
+                              <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
+                        </div>
+                        <div style="display:none">
+                          <div class="row repeatingOtherActionOfficer">
 
-</div>
-                      </div>
+                              <div class="col-sm-6">
 
+                                  <label class="col-sm-6">Action Officer:</label>
+                                    <input type="text" name="actionOfficer[]"   class="col-sm-6" >
+                              </div>
+                               <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
+                          </div>
+                        </div>
+                    </div>
 
                       <div class="clearfix"></div>
                       <hr class="add_activity"/>

@@ -239,8 +239,9 @@ $('.addActionMember').click(function(e){
 
         var lastRepeatingGroup = $('.repeatingActionOfficer').last();
         var cloned = lastRepeatingGroup.clone(true)
+        console.log(lastRepeatingGroup.html());
 
-		cloned.find(".action_officers").val("");
+		    // cloned.find(".action_officers").val("");
         cloned.insertAfter($(this).parent().parent('div'));
         resetHazaradsAttributeNames(cloned)
     });
@@ -271,7 +272,25 @@ $('.deleteActonOfficer').click(function(e){
 
     });
 
+    $('.addOtherActionMember').click(function(e){
+            e.preventDefault();
 
+            var currentHazardsActionOfficerCount = $(this).parent().parent().find('#hazardsActionOfficerCount').val();
+
+            if(currentHazardsActionOfficerCount >= 5)
+            {
+               alert("You can't add more than 5 Action Officers");
+                return;
+            }
+
+            var nextHazardsActionOfficerCount = parseInt(currentHazardsActionOfficerCount) + 1;
+            $(this).parent().parent().find('#hazardsActionOfficerCount').val(nextHazardsActionOfficerCount);
+
+            var lastRepeatingGroup = $('.repeatingOtherActionOfficer').last();
+            var cloned = lastRepeatingGroup.clone(true)
+            cloned.insertAfter($(this).parent('div'));
+            resetHazaradsAttributeNames(cloned);
+        });
 
 
 

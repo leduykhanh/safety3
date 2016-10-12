@@ -459,7 +459,7 @@ td p{
 
                                               while($valueAllActionOfficer = mysqli_fetch_assoc($resultActtionOfficer))
                                               {
-                                                echo "<div>$valueAllActionOfficer[name]</div>";
+                                                echo "<div>".(in_array($valueAllActionOfficer['name'],array("name1","name2"))?$raMembers[$valueAllActionOfficer["name"]]:$valueAllActionOfficer["name"])."</div>";
                                               }
 
 
@@ -555,7 +555,7 @@ td p{
 
                                               while($valueAllActionOfficer = mysqli_fetch_assoc($resultActtionOfficer))
                                               {
-                                                echo "<div>$valueAllActionOfficer[name]</div>";
+                                                echo "<div>".(in_array($valueAllActionOfficer['name'],array("name1","name2"))?$raMembers[$valueAllActionOfficer["name"]]:$valueAllActionOfficer["name"])."</div>";
                                               }
 
 

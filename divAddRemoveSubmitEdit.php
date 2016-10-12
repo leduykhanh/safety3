@@ -597,13 +597,14 @@ $cntval = 1;
                           }
                           ?>
 
-                      <div class="row form-row">
+                      <div class="col-sm-12 form-row">
 
-                        <div class="col-sm-12">
+                        <div class="row col-sm-12 form-row">
                           <button class="col-sm-2 btn btn-primary addActionMember" id="add_new_member">+Action Officer</button>
+                          <button class="col-sm-2 col-sm-offset-1 btn btn-primary addOtherActionMember" id="add_new_other_member">Add Others</button>
                            <input type="hidden" name="hazardsActionOfficerCount[]" id="hazardsActionOfficerCount" value="<?php echo $numActionOfficer;?>" />
                         </div>
-                      </div>
+
 
 
 
@@ -613,10 +614,9 @@ $cntval = 1;
                               while($valueActionOfficer = mysqli_fetch_assoc($resultAllActionOfficer))
                               {
                               ?>
-                              <div id="clonedInput1" class="row repeatingActionOfficer">
+                              <div id="clonedInput1" class="row">
 
                                     <div class="col-sm-6">
-                                      <div class="row">
                                         <label class="col-sm-6">Action Officer:</label>
                                         <?php
                                         if (in_array($valueActionOfficer['name'],array("name1","name2"))){ ?>
@@ -630,7 +630,6 @@ $cntval = 1;
                                         else {
                                           echo "<input type='text' name='actionOfficer[]' value='".$valueActionOfficer["name"]."'  class='col-sm-6 action_officers' >";
                                           }?>
-                                      </div>
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
                               </div>
@@ -664,12 +663,7 @@ $cntval = 1;
                         <?php
                           }
                         ?>
-
-
-
-
-
-
+                        </div>
 
 
                        <div class="clearfix"></div>

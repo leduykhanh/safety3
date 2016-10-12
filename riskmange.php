@@ -172,7 +172,7 @@ if(isset($insertHazardsId))
 
   if($_POST['saveAsDraft'] == 'Next')
   {
-    echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
+     echo "<script>window.open('riskapproval.php?riskId=".$riskassessmentId."','_self')</script>";
   }
   else
   {
