@@ -28,31 +28,38 @@ if($_POST){
 													 ';
 						   if($key_value !=""){
 						   $output .='<div class="form-row row">
-                            <label class="col-sm-6">Existing Risk Control:</label>
-                               <div class="col-sm-12">
+                            <label class="col-sm-6">Existing Risk Control:</label>';
+								 			if($key_value ==="other"){
+												$output .=' <div class="col-sm-6">
+																		<textarea class="col-sm-12" type="text" id="inputSaving" name="ExistingRiskControl[]" rows="5"></textarea>
+																		</div>
+																	';
+											}
+											else{
+                              $output .=' <div class="col-sm-12">
                                    <div class="checkbox">
                                         <label><input type="checkbox" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][[]" value="select_all" onclick="risk_control(this,\'risk_control_'.$work_activity.'_'.$hazard.'\');">Select All</label>
                                     </div> ';
 
-								 foreach($e_r_c as $key_get_e_r_c  => $value_get_e_r_c)
-								{
-									$output .= '<div class="checkbox">
-                                        <label><input type="checkbox" class="risk_control_'.$work_activity.'_'.$hazard.'" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][]"  value="'.$key_get_e_r_c.'">'.$value_get_e_r_c.'</label>
-                                    </div>   ';
-								}
+												 foreach($e_r_c as $key_get_e_r_c  => $value_get_e_r_c)
+												{
+													$output .= '<div class="checkbox">
+				                                        <label><input type="checkbox" class="risk_control_'.$work_activity.'_'.$hazard.'" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][]"  value="'.$key_get_e_r_c.'">'.$value_get_e_r_c.'</label>
+				                                    </div>   ';
+												}
 
 
-                                $output.='<div class="checkbox">
-                                        <label>If others, please specify<input type="text"  class="with_textbox_value" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][c_t]" value=""/>
+				                                $output.='<div class="checkbox">
+				                                        <label>If others, please specify<input type="text"  class="with_textbox_value" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][c_t]" value=""/>
 
-										</label>
+														</label>
 
-                                    </div>
-									    <div id="add_others_'.$work_activity.'_'.$hazard.'"></div>
-									 <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="'.$work_activity.'" data-haz ="'.$hazard.'" value="Add others"  />
-                            </div>
-
-                          </div>  ';
+				                                    </div>
+													    <div id="add_others_'.$work_activity.'_'.$hazard.'"></div>
+													 <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="'.$work_activity.'" data-haz ="'.$hazard.'" value="Add others"  />
+				                            </div>';
+														}
+                          $output .='</div>  ';
 	}
 
 
