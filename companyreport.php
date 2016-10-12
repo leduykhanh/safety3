@@ -380,7 +380,7 @@ td p{
                                       }?>
                                     </td>
 
-                                    <td rowspan="1" colspan="1" style="text-align: left;white-space:pre;">
+                                    <td rowspan="1" colspan="1" style="text-align: left;white-space:pre-line;">
 
 									<?php
 									$existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
@@ -496,7 +496,7 @@ td p{
                                           }
                                         }
                                       ?> </td>
-                                      <td rowspan="1" colspan="1" style="text-align: left;white-space:pre;">
+                                      <td rowspan="1" colspan="1" style="text-align: left;white-space:pre-line;">
                         <?php
                     $existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
 										if($existing_risk != "" &&  $hzardsValue['name']!=="other")
@@ -514,7 +514,7 @@ td p{
 											}
 										}
                     else{
-                      echo " <strong>".$existing_risk."</strong> <br>";
+                      echo " <strong>".wordwrap ($existing_risk, 15, "\n", 1)."</strong> <br>";
                     }
 									?> </td>
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['security'];?></td>
