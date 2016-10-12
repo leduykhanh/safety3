@@ -498,7 +498,7 @@ td p{
                                       ?> </td>
                                       <td rowspan="1" colspan="1">
                         <?php
-                    $existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control']
+                    $existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
 										if($existing_risk != "" &&  $hzardsValue['name']!=="other")
 										{
 											foreach($existing_risk as  $existing_risk_key => $existing_risk_value)
