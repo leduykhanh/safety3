@@ -333,17 +333,19 @@ $cntval = 1;
                             </select>
 
                           </div>
+                          <?php if(count($resultAllHazardInjuryOthers)>0){
+                            // echo "<div class='col-sm-12' > Others </div>";
+                            foreach ($resultAllHazardInjuryOthers as $v) {
+                              echo '<input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" name="InjuryAccidentOthers[]"   value='.$v["injury"].' >';
+                              echo '<a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'.$wrk_act.' remove_other_injury" data-id ="add_others_injury_'.$wrk_act.'_'.$wrk_act.'" data-remove="c_t_j_'.$wrk_act.'"> Remove</a>';
+                            }
+                          } ?>
                           <div class="row">
                             <div id="add_others_injury_<?php echo $wrk_act; ?>_<?php echo $wrk_act; ?>"></div>
                             <input type="hidden" name="hazardsOthersInjuryCount[]" id="hazardsOthersInjuryCount" value="1" />
                             <input type="button" class="col-sm-3 btn btn-primary add_others_injury" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $wrk_act; ?>" value="Add others"  />
                           </div>
-                          <?php if(count($resultAllHazardInjuryOthers)>0){
-                            // echo "<div class='col-sm-12' > Others </div>";
-                            foreach ($resultAllHazardInjuryOthers as $v) {
-                              echo "<input type='text' class='col-sm-12' value=".$v["injury"]." >";
-                            }
-                          } ?>
+
                          <div class="row">
                             <label class="col-sm-6">Existing Risk Control:</label>
                             <?php
@@ -613,11 +615,18 @@ $cntval = 1;
                                     <div class="col-sm-6">
                                       <div class="row">
                                         <label class="col-sm-6">Action Officer:</label>
+                                        <?php
+                                        if (in_array($valueActionOfficer['name'],array("W. K. Chan","Liang Kan Fat"))){ ?>
                                         <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
                                             <option value="">Select Action Officer</option>
                                             <option value="W. K. Chan" <?php echo ($valueActionOfficer['name'] == "W. K. Chan")?'selected="selected"' : ''; ?>>W. K. Chan</option>
                                             <option value="Liang Kan Fat" <?php echo ($valueActionOfficer['name'] == "Liang Kan Fat")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
                                         </select>
+                                        <?php
+                                        }
+                                        else {
+                                          echo '<input name="actionOfficer[]" value='.$valueActionOfficer['name'].'  class="col-sm-6 action_officers" >';
+                                          }?>
                                       </div>
                                     </div>
                                     <button class="col-sm-1 btn btn-danger deleteActonOfficer" style="margin-left:20px;">Remove</button>
