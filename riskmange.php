@@ -80,7 +80,7 @@ define('NON_ACTIVE', 0);
       //insert all the ra members
        foreach ($_POST['RA_Member'] as $RA_Member)
         {
-          $raMemberSql = "INSERT INTO `ramember` (`id`, `riskid`, `name`, `stauts`) VALUES (NULL, '".$riskassessmentId."', '".$RA_Member."', '')";
+          $raMemberSql = "INSERT INTO `ramember` (`id`, `riskid`, `name`, `stauts`) VALUES (NULL, '".$riskassessmentId."', '".$RA_Member."', 0)";
 
           mysqli_query($con, $raMemberSql);
         }
