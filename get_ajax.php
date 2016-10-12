@@ -31,7 +31,7 @@ if($_POST){
                             <label class="col-sm-6">Existing Risk Control:</label>';
 								 			if($key_value ==="other"){
 												$output .=' <div class="col-sm-6">
-																		<textarea class="col-sm-12" type="text" id="inputSaving" name="ExistingRiskControl[]" rows="5"></textarea>
+																		<textarea class="col-sm-12" type="text" id="inputSaving" name="ExistingRiskControl['.$work_activity.']['.$hazard.'][]" rows="5"></textarea>
 																		</div>
 																	';
 											}
