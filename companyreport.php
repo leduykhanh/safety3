@@ -486,7 +486,7 @@ td p{
                             {
                                 ?>
                                     <tr>
-                                      <td rowspan="1" colspan="1"> <?php echo $harzard[$hzardsValue['name']];?> </td>
+                                      <td rowspan="1" colspan="1"> <?php echo $hzardsValue['name']!=="other"?$harzard[$hzardsValue['name']]:$hzardsValue['name_other'];?> </td>
                                       <td rowspan="1" colspan="1"> <?php echo $injury[$hzardsValue['accident']];?> </td>
                                       <td rowspan="1" colspan="1"> <?php $existing_risk = unserialize($hzardsValue['risk_control']);
 										if($existing_risk != "")
