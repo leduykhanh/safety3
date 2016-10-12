@@ -336,7 +336,7 @@ $cntval = 1;
                           <?php if(count($resultAllHazardInjuryOthers)>0){
                             // echo "<div class='col-sm-12' > Others </div>";
                             foreach ($resultAllHazardInjuryOthers as $v) {
-                              echo '<input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" name="InjuryAccidentOthers[]"   value='.$v["injury"].' >';
+                              echo '<input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" name="InjuryAccidentOthers[]"   value="'.$v["injury"].'" >';
                               echo '<a style=" float:left;" href="javascript:void(0)" class="btn btn-danger c_t_j_'.$wrk_act.' remove_other_injury" data-id ="add_others_injury_'.$wrk_act.'_'.$wrk_act.'" data-remove="c_t_j_'.$wrk_act.'"> Remove</a>';
                             }
                           } ?>
