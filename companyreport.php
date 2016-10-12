@@ -371,7 +371,7 @@ td p{
                                     </td>
 
                                     <td rowspan="1" colspan="1" style="text-align: justify;">
-                                      <?php echo $hzardsValue['accident']!==""?$injury[$hzardsValue['accident']]:"";
+                                      <?php echo $hzardsValue['accident']!==""?$injury[$hzardsValue['accident']]."<br />":"";
                                       if(count($resultAllHazardInjuryOthers)>0){
                                         // echo "<div class='col-sm-12' > Others </div>";
                                         foreach ($resultAllHazardInjuryOthers as $v) {
@@ -488,7 +488,7 @@ td p{
                                     <tr>
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['name']!=="other"?$harzard[$hzardsValue['name']]:$hzardsValue['name_other'];?> </td>
                                       <td rowspan="1" colspan="1">
-                                        <?php echo $injury[$hzardsValue['accident']];
+                                        <?php echo $injury[$hzardsValue['accident']]."<br />";
                                         if(count($resultAllHazardInjuryOthers)>0){
                                           // echo "<div class='col-sm-12' > Others </div>";
                                           foreach ($resultAllHazardInjuryOthers as $v) {
