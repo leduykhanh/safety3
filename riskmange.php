@@ -13,7 +13,7 @@ exit;*/
 define('NON_ACTIVE', 0);
   $i = 0;
   $k = 1; // this is for keep track of j and loop from next level
-  $l = 1; //for action officer
+  $l = 2; //for action officer
   $m = 0; // For other injuries
 
 
@@ -76,7 +76,7 @@ define('NON_ACTIVE', 0);
      $riskassessment = "INSERT INTO `riskassessment` (`id`, `createdBy`, `location`, `process`, `createdDate`, `approveDate`, `revisionDate`, `approveBy`, `status`,`expiry_date`) VALUES (NULL, '".$_SESSION['adminid']."', '".$_POST['location']."', '".$_POST['process']."', '".$creationDate."', NULL, NULL, NULL, '".$status."',".$_POST["expiry_date"].");";
       $insert_riskassessment=mysqli_query($con, $riskassessment);
       $riskassessmentId = mysqli_insert_id($con);
-      echo $riskassessment;
+      // echo $riskassessment;
       //insert all the ra members
        foreach ($_POST['RA_Member'] as $RA_Member)
         {
@@ -122,10 +122,12 @@ define('NON_ACTIVE', 0);
 
              //insert hazards action officer of this hazards
              $numOfActionOfficer = $_POST['hazardsActionOfficerCount'][$k];
-
+              // print_r($_POST['actionOfficer']);
+              // echo $numOfActionOfficer;
                  for($numOfAction = 1; $numOfAction <= $numOfActionOfficer; $numOfAction++)
                   {
-
+                  // echo $l;
+                  // echo $_POST['actionOfficer'][$l];
 
                    $sqlHazardsActionOfficer = "INSERT INTO `actionofficer` (`id`, `hazardid`, `name`) VALUES (NULL, '".$insertHazardsId."', '".$_POST['actionOfficer'][$l]."')";
                    mysqli_query($con, $sqlHazardsActionOfficer);
