@@ -487,9 +487,19 @@ td p{
                                 ?>
                                     <tr>
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['name']!=="other"?$harzard[$hzardsValue['name']]:$hzardsValue['name_other'];?> </td>
-                                      <td rowspan="1" colspan="1"> <?php echo $injury[$hzardsValue['accident']];?> </td>
-                                      <td rowspan="1" colspan="1"> <?php $existing_risk = unserialize($hzardsValue['risk_control']);
-										if($existing_risk != "")
+                                      <td rowspan="1" colspan="1">
+                                        <?php echo $injury[$hzardsValue['accident']];
+                                        if(count($resultAllHazardInjuryOthers)>0){
+                                          // echo "<div class='col-sm-12' > Others </div>";
+                                          foreach ($resultAllHazardInjuryOthers as $v) {
+                                            echo "- ".$v["injury"]." <br />";
+                                          }
+                                        }
+                                      ?> </td>
+                                      <td rowspan="1" colspan="1">
+                        <?php
+                    $existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control']
+										if($existing_risk != "" &&  $hzardsValue['name']!=="other")
 										{
 											foreach($existing_risk as  $existing_risk_key => $existing_risk_value)
 											{
@@ -503,6 +513,9 @@ td p{
 												}
 											}
 										}
+                    else{
+                      echo " <strong>".$existing_risk."</strong> <br>";
+                    }
 									?> </td>
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['security'];?></td>
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['likehood'];?> </td>
