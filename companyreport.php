@@ -421,7 +421,7 @@ td p{
                                      </td>
 
 
-                                    <td rowspan="1" colspan="1"> <?php echo $hzardsValue['risk_additional'];?> </td>
+                                    <td rowspan="1" colspan="1" style="text-align: left;white-space:pre-line;"> <?php echo $hzardsValue['risk_additional'];?> </td>
 
                                     <?php
 									if($hzardsValue['risk_additional']=="")
@@ -521,7 +521,7 @@ td p{
                                       <td rowspan="1" colspan="1"> <?php echo $hzardsValue['likehood'];?> </td>
                                       <td rowspan="1" colspan="1"><?php echo $hzardsValue['security'] * $hzardsValue['likehood'];?>
                                      </td>
-                                      <td rowspan="1" colspan="1"> <?php echo $hzardsValue['risk_additional'];?> </td>
+                                      <td rowspan="1" colspan="1" style="text-align: left;white-space:pre-line;"> <?php echo $hzardsValue['risk_additional'];?> </td>
                                         <?php
 									if($hzardsValue['risk_additional']=="")
 									{
