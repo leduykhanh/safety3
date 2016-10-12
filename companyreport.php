@@ -254,7 +254,7 @@ td p{
 
                 <tr>
                      <td rowspan="1" colspan="1" style="width:15%">Last Review Date:</td>
-                     <td rowspan="1" colspan="1" style="width:20%"><?php if($risk['approveDate'] !='0000-00-00 00:00:00')
+                     <td rowspan="1" colspan="1" style="width:20%"><?php if($risk['approveDate'] !=null)
                         {
 							echo $date = date('d-m-Y', strtotime($risk['approveDate']));
 						}
@@ -275,12 +275,12 @@ td p{
                      <td rowspan="1" colspan="1" style="width:20%">
 					 <?php
 
-					 if($risk['approveDate'] !='0000-00-00 00:00:00')
+					 if($risk['approveDate'] !=null)
                         {
                           echo $date = date('d-m-Y', strtotime('+3 years', strtotime($risk['approveDate'])));
 
                         }
-                        else if($risk['createdDate'] != '0000-00-00 00:00:00')
+                        else if($risk['createdDate'] != null)
                         {
 							echo $date = date('d-m-Y', strtotime('+3 years', strtotime($risk['createdDate'])));
 						}
