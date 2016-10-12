@@ -619,11 +619,11 @@ $cntval = 1;
                                       <div class="row">
                                         <label class="col-sm-6">Action Officer:</label>
                                         <?php
-                                        if (in_array($valueActionOfficer['name'],array("W. K. Chan","Liang Kan Fat"))){ ?>
+                                        if (in_array($valueActionOfficer['name'],array("name1","name2"))){ ?>
                                         <select name="actionOfficer[]"   class="col-sm-6 action_officers" >
                                             <option value="">Select Action Officer</option>
-                                            <option value="W. K. Chan" <?php echo ($valueActionOfficer['name'] == "W. K. Chan")?'selected="selected"' : ''; ?>>W. K. Chan</option>
-                                            <option value="Liang Kan Fat" <?php echo ($valueActionOfficer['name'] == "Liang Kan Fat")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
+                                            <option value="name1" <?php echo ($valueActionOfficer['name'] == "name1")?'selected="selected"' : ''; ?>>W. K. Chan</option>
+                                            <option value="name2" <?php echo ($valueActionOfficer['name'] == "name2")?'selected="selected"' : ''; ?>>Liang Kan Fat</option>
                                         </select>
                                         <?php
                                         }
