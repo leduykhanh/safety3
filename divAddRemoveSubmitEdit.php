@@ -349,6 +349,7 @@ $cntval = 1;
                          <div class="row">
                             <label class="col-sm-6">Existing Risk Control:</label>
                             <?php
+                            if($valueAllHazards['name']!=="other"){
 							$e_r_c = $existing_risk_control[$valueAllHazards['name']];
 							$existing_riskcontroll = unserialize($valueAllHazards['risk_control']);
 
@@ -383,9 +384,10 @@ $cntval = 1;
                                         <label class="<?php echo $key_e_r_c;?>"  style=" float: left;width: 100%;">If others, please specify</label><input style="width: 82%;float: left;margin: 0px 5px 5px 0px;" type="text" class="with_textbox_value <?php echo $key_e_r_c;?>" name="ExistingRiskControl[<?php echo $wrk_act; ?>][<?php echo $cntval ?>][<?php echo $key_e_r_c;?>]" value="<?php echo $existing_riskcontroll[$key_e_r_c] ?>"/> <a style=" float:left;" href="javascript:void(0)" data-id="add_others_<?php echo $wrk_act; ?>_<?php echo $cntval ?>" class="btn btn-danger <?php echo $key_e_r_c;?> remove_other_data" data-remove="<?php echo $key_e_r_c;?>"> Remove</a>
                                         <br />
                                   <?php }
-									}
+									        }
 								  }
-								}?>
+								}
+              }?>
                                   </div>
  <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $cntval ?>" value="Add others"  />
                             </div>
