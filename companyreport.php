@@ -388,7 +388,8 @@ td p{
 									{
 										foreach($existing_risk as  $existing_risk_key => $existing_risk_value)
 										{
-                      if ($existing_risk_value === "select_all") continue;
+                      if ($existing_risk_value === "select_all" || $existing_risk_value === "") continue;
+
 											if(substr($existing_risk_key, 0, 3) === "c_t")
 											{
 												echo "- <strong>".$existing_risk[$existing_risk_key]."</strong> <br>";
@@ -504,7 +505,7 @@ td p{
 										{
 											foreach($existing_risk as  $existing_risk_key => $existing_risk_value)
 											{
-                        if ($existing_risk_value === "select_all") continue;
+                        if ($existing_risk_value === "select_all" || $existing_risk_value === "") continue;
 												if(substr($existing_risk_key, 0, 3) === "c_t")
 											{
 												echo "<strong>- ".$existing_risk[$existing_risk_key]."</strong> <br>";
