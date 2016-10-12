@@ -380,7 +380,7 @@ td p{
                                       }?>
                                     </td>
 
-                                    <td rowspan="1" colspan="1" style="text-align: justify;">
+                                    <td rowspan="1" colspan="1" style="text-align: left;white-space:pre;">
 
 									<?php
 									$existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
@@ -496,7 +496,7 @@ td p{
                                           }
                                         }
                                       ?> </td>
-                                      <td rowspan="1" colspan="1">
+                                      <td rowspan="1" colspan="1" style="text-align: left;white-space:pre;">
                         <?php
                     $existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
 										if($existing_risk != "" &&  $hzardsValue['name']!=="other")
