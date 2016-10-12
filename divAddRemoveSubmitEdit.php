@@ -391,7 +391,7 @@ $cntval = 1;
                <input type="button" class="col-sm-3 btn btn-primary add_others" data-wrk ="<?php echo $wrk_act; ?>" data-haz ="<?php echo $cntval ?>" value="Add others"  />
                                 </div>
                               <?php }else{
-                                echo '<textarea class="col-sm-6" type="text" id="inputSaving" name="ExistingRiskControl['.$wrk_act.']['.$cntval.']" rows="5"></textarea>';
+                                echo '<textarea class="col-sm-6" value="" type="text" id="inputSaving" name="ExistingRiskControl['.$wrk_act.']['.$cntval.']" rows="5">'.$valueAllHazards['risk_control'].'</textarea>';
                               }?>
 
                           </div>
