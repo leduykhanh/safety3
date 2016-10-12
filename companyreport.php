@@ -383,8 +383,8 @@ td p{
                                     <td rowspan="1" colspan="1" style="text-align: justify;">
 
 									<?php
-									$existing_risk = unserialize($hzardsValue['risk_control']);
-									if($existing_risk != "")
+									$existing_risk = $hzardsValue['name']!=="other"?unserialize($hzardsValue['risk_control']):$hzardsValue['risk_control'];
+									if($existing_risk != "" &&  $hzardsValue['name']!=="other")
 									{
 										foreach($existing_risk as  $existing_risk_key => $existing_risk_value)
 										{
@@ -397,6 +397,9 @@ td p{
 											}
 										}
 									}
+                  else{
+                    echo " <strong>".$existing_risk."</strong> <br>";
+                  }
 
 
 									//echo wordwrap ($hzardsValue['risk_control'], 15, "\n", 1);?> </td>

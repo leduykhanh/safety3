@@ -107,7 +107,7 @@ define('NON_ACTIVE', 0);
               $actonDateToInsert = new DateTime($actionDate);
               $actonDateNow = date_format($actonDateToInsert, 'Y-m-d H:i:s'); // 2011-03-03 00:00:00
 
-			        $ExistingRiskControl = serialize($_POST['ExistingRiskControl'][$i][$j]);
+			        $ExistingRiskControl = $_POST['Hazard'][$k]!== "other"? serialize($_POST['ExistingRiskControl'][$i][$j]):$_POST['ExistingRiskControl'][$i][$j];
 
 
             $sqlHazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`,`name_other`)
