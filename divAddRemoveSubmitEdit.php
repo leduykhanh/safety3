@@ -625,7 +625,7 @@ $cntval = 1;
                                         <?php
                                         }
                                         else {
-                                          echo '<input name="actionOfficer[]" value='.$valueActionOfficer['name'].'  class="col-sm-6 action_officers" >';
+                                          echo '<input type="text" name="actionOfficer[]" value='.$valueActionOfficer["name"].'  class="col-sm-6 action_officers" >';
                                           }?>
                                       </div>
                                     </div>
