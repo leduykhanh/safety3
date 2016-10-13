@@ -29,7 +29,7 @@
 	 $riskdataseven= $riskcopy["approverEmail"];
 	 $riskdataeight= $riskcopy["status"];
  ?>
- <?php echo $sql_risk; ?>
+ <?php// echo $sql_risk; ?>
 
  <?php
  $sql_risk = "INSERT INTO riskassessment (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status,expiry_date)
@@ -96,7 +96,6 @@ if(isset($_GET['riskid']))
 
 
 
-
 					 $insert_workactivity=mysqli_query($con, $sql_workactivity);
 
 
@@ -117,10 +116,10 @@ if(isset($_GET['riskid']))
 									while ($valueHazards  = mysqli_fetch_assoc($resulHazards))
 									{
 
-										$sql_hazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`) VALUES (NULL, '".$newWorkId."', '".$valueHazards['name']."', '".$valueHazards['security']."', '".$valueHazards['securitysecond']."', '".$valueHazards['accident']."', '".$valueHazards['likehood']."', '".$valueHazards['likehoodsecond']."', '".$valueHazards['risk_control']."', '".$valueHazards['risk_label']."', '".$valueHazards['risk_additional']."', '".$valueHazards['action_officer']."', '".$valueHazards['action_date']."', '0')";
+										$sql_hazards = "INSERT INTO `hazard` (`hazard_id`, `work_id`, `name`, `security`, `securitysecond`, `accident`, `likehood`, `likehoodsecond`, `risk_control`, `risk_label`, `risk_additional`, `action_officer`, `action_date`, `status`,`name_other`) VALUES (NULL, '".$newWorkId."', '".$valueHazards['name']."', '".$valueHazards['security']."', '".$valueHazards['securitysecond']."', '".$valueHazards['accident']."', '".$valueHazards['likehood']."', '".$valueHazards['likehoodsecond']."', '".$valueHazards['risk_control']."', '".$valueHazards['risk_label']."', '".$valueHazards['risk_additional']."', '".$valueHazards['action_officer']."', '".$valueHazards['action_date']."', '0','".$valueHazards['name_other']."')";
 					 					$insert_hazards=mysqli_query($con, $sql_hazards);
 					 					$newHazardsId = mysqli_insert_id($con);
-
+                    // echo $sql_hazards;
 
 										//get all action officer
 
