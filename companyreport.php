@@ -231,7 +231,10 @@ td p{
                      <td rowspan="1" colspan="1" style="width:20%"><?php echo wordwrap ($risk['process'], 15, "\n", 1);?></td>
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 1: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];
-                       if($raMember['name']!==NULL) echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
+                       if($raMember['name']!==NULL) {
+                         echo "(".$raSinatures[$raMember['name']].")";
+                         echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
+                       }
                        ?>
                      </td>
                 </tr>
@@ -240,7 +243,10 @@ td p{
                      <td rowspan="1" colspan="1" style="width:20%" ><?php echo $risk['location'];?></td>
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 2: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];
-                       if($raMember['name']!==NULL) echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
+                       if($raMember['name']!==NULL) {
+                         echo "(".$raSinatures[$raMember['name']].")";
+                         echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
+                       }
                        ?></td>
                 </tr>
 
