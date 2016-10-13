@@ -120,7 +120,7 @@ if(isset($_GET['riskid']))
 					 					$insert_hazards=mysqli_query($con, $sql_hazards);
 					 					$newHazardsId = mysqli_insert_id($con);
                     // echo $sql_hazards;
-                    mysqli_query($con,"INSERT INTO `injury_hazard` (hazard_id,injury) SELECT ".$newHazardsId.",injury From `injury_hazard` where `hazard_id`=".$valueHazards["hazard_id"])
+                    mysqli_query($con,"INSERT INTO `injury_hazard` (hazard_id,injury) SELECT ".$newHazardsId.",injury From `injury_hazard` where `hazard_id`=".$valueHazards["hazard_id"]);
 										//get all action officer
 
 										$actionofficerSql = "SELECT * FROM  `actionofficer` WHERE  `hazardid` =".$valueHazards['hazard_id']."";
