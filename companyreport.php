@@ -232,7 +232,7 @@ td p{
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 1: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];
                        if($raMember['name']!==NULL) {
-                         echo "(".$raSinatures[$raMember['name']].")";
+                         echo "(".$raDesignations[$raMember['name']].")";
                          echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
                        }
                        ?>
@@ -244,7 +244,7 @@ td p{
                      <td rowspan="1" colspan="1" style="width:25%">
                        RA Member 2: <?php $raMember = mysqli_fetch_assoc($resultlRAMember); echo $raMembers[$raMember['name']];
                        if($raMember['name']!==NULL) {
-                         echo "(".$raSinatures[$raMember['name']].")";
+                         echo "(".$raDesignations[$raMember['name']].")";
                          echo "<img width='40' src='staff/".$raSinatures[$raMember['name']]."' />";
                        }
                        ?></td>
