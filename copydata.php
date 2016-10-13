@@ -32,6 +32,7 @@
  <?php echo $sql_risk; ?>
 
  <?php
+ var_dump($riskcopy);
  $sql_risk = "INSERT INTO riskassessment       (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
 VALUES ('$riskdata', '$riskdataone', '$riskdatatwo', '$today', NULL, '$afterthreeYears', '$riskdatasix', '$riskdataseven', '0')";
  $insert_copyrecord=mysqli_query($con, $sql_risk);
