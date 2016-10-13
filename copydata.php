@@ -32,11 +32,11 @@
  <?php echo $sql_risk; ?>
 
  <?php
- $sql_risk = "INSERT INTO riskassessment (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
-SElect createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,0
+ $sql_risk = "INSERT INTO riskassessment (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status,expiry_date)
+SElect createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,0,expiry_date
 from riskassessment  where id=$_GET[riskid]";
  $insert_copyrecord=mysqli_query($con, $sql_risk);
- echo $sql_risk;
+ // echo $sql_risk;
  $last_id = mysqli_insert_id($con);
  //signing insert Signing against
 
@@ -155,4 +155,4 @@ if(isset($_GET['riskid']))
  }
 
  ?>
-  <!-- <script type="text/javascript">window.location.assign("listwork_activity.php?id=<?php echo $last_id;?>&status=0&copydata=Data Copied successfully")</script> -->
+  <script type="text/javascript">window.location.assign("listwork_activity.php?id=<?php echo $last_id;?>&status=0&copydata=Data Copied successfully")</script>
