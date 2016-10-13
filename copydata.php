@@ -33,7 +33,7 @@
 
  <?php
  $sql_risk = "INSERT INTO riskassessment       (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
-VALUES ('$riskdata', '$riskdataone', '$riskdatatwo', '$today', '0', '$afterthreeYears', '$riskdatasix', '$riskdataseven', '0')";
+VALUES ('$riskdata', '$riskdataone', '$riskdatatwo', '$today', NULL, '$afterthreeYears', '$riskdatasix', '$riskdataseven', '0')";
  $insert_copyrecord=mysqli_query($con, $sql_risk);
  echo $sql_risk;
  $last_id = mysqli_insert_id($con);
