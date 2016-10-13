@@ -33,8 +33,9 @@
 
  <?php
  var_dump($riskcopy);
- $sql_risk = "INSERT INTO riskassessment       (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
-VALUES ('$riskdata', '$riskdataone', '$riskdatatwo', '$today', NULL, '$afterthreeYears', '$riskdatasix', '$riskdataseven', '0')";
+ $sql_risk = "INSERT INTO riskassessment (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
+SElect createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,0
+from riskassessment  where id=$_GET[riskid]";
  $insert_copyrecord=mysqli_query($con, $sql_risk);
  echo $sql_risk;
  $last_id = mysqli_insert_id($con);

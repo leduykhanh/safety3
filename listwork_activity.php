@@ -60,6 +60,7 @@ $afterSevenYears = date('Y-m-d H:i:s', strtotime('+3 years'));
                 //get count
               //0 outstanding 1 for draft 2 approved 3 archive
                     $sqlOutStanding = "SELECT * FROM riskassessment where status = 0";
+                    mysqli_query($con,"CALL archive(1)");
                     $resultlOutStanding = mysqli_query($con, $sqlOutStanding);
                     $outStandingRow= mysqli_num_rows($resultlOutStanding);
 
