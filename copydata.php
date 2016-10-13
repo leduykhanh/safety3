@@ -32,7 +32,6 @@
  <?php echo $sql_risk; ?>
 
  <?php
- var_dump($riskcopy);
  $sql_risk = "INSERT INTO riskassessment (createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,status)
 SElect createdBy,location,process,createdDate,approveDate,revisionDate,approveBy,approverEmail,0
 from riskassessment  where id=$_GET[riskid]";
