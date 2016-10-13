@@ -4,12 +4,12 @@ $raMembers = array(
 	"name2" => "Liang Kan Fat",
 	"" => ""
 );
-$raSinatures = array(
+$raDesignations = array(
 	"name1" => "Manager",
 	"name2" => "Foreman",
 	"" => ""
 );
-$raDesignations = array(
+$raSinatures = array(
 	"name1" => "chan.png",
 	"name2" => "fat.png",
 );
